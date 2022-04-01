@@ -1,0 +1,591 @@
+<!DOCTYPE html> <!--shortcut to this format !Tab-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS</title>
+        <!-- we have 3 types of styles ( inline , internal , external)  -->
+        <!-- inline style override internal style , internal style override external style  -->
+        <!-- external style -->
+        <link rel="stylesheet" href="css/master.css">
+        <!-- 
+        <link rel="stylesheet" href="css/liberary.css">
+        <link rel="stylesheet" href="css/rtl.css"> 
+        you can put more than one link for styling for example you want to use liberary 
+        or you want another css file that ovverride the style if the use change the language
+        -->
+        <!-- internal style -->
+        <style>
+            .internal {
+        color:darkblue;
+        }
+    /* 3 type of styling
+    external style = better to use becuase you can adjust it easily without the HTML file
+    internal style = you should have access to HTML file for adjustment 
+    inline style = its stonger than external and internal for example if you choose color red 
+    for all paragraph from external css file or internal style 
+    and inilne style is Blue for specific element the final color will be Blue */
+        </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p style="color:blueviolet">css test </p> <!--inline style-->
+        <p>css test </p>
+        <p class="special">css test </p>
+        <p class="internal">css test </p>
+        <hr>
+        <div>DIV</div> <!-- identifier like class , id -->
+        <div class="test1">DIV</div> <!-- name convention : in CSS better to use (test-one) kebab case than (testOne) camel case-->
+        <div class="test2">DIV</div> <!-- naming rules for identifier first letter can be ( - , _ , letter) but not (no.) no. can be in the middle but not first letter-->
+                                     <!-- @ is invalid if firrst letter and also if it's in middle -->
+        <hr>
+        <div class="background">
+            <h2>Product Title</h2>
+            <p>This is Paragraph</p>
+            <p>This is Paragraph</p>
+            <p>This is Paragraph</p>
+            <p>This is Paragraph</p>
+            <p>This is Paragraph</p>
+            <p>This is Paragraph</p>
+            <p>This is Paragraph</p>
+            <p>This is Paragraph</p>
+            <p>This is Paragraph</p>
+            <p>This is Paragraph</p>
+            <p>This is Paragraph</p>
+            <p>This is Paragraph</p>
+            <p>This is Paragraph</p>
+            <p>This is Paragraph</p>
+            <p>This is Paragraph</p>
+            <p>This is Paragraph</p>
+        </div>
+        <hr>
+        <div class="background1">
+            <h2>Product Title</h2>
+            <p>This is Paragraph</p>
+        </div>
+        <hr>
+        <div class="background2">
+            <h2>Product Title</h2>
+            <p>This is Paragraph</p>
+        </div>
+        <hr>
+        <div class="Block">DIV => Block</div>
+        <div class="Block">DIV => Block</div>
+        <div class="Block">DIV => Block</div>
+        <hr> 
+        <span class="Inline">span => Inline</span>
+        <span class="Inline">span => Inline</span>
+        <span class="Inline">span => Inline</span>
+        <div>inline does not repect padding up and down</div>
+        <hr>
+        <span class="Mix">span => Inline</span>
+        <span class="Mix">span => Inline</span>
+        <span class="Mix">span => Inline</span>
+        <div>inline-block repect padding up and down</div>
+        <hr>
+        <div class="visible">Visibilty</div>
+        <div class="visible">Visibilty</div>
+        <hr>
+        <div class="visible1">first</div>
+        <div class="visible2">second</div>
+        <hr>
+        <div class="one">one</div>
+        <div class="two">two</div>
+        <div class="three">three</div>
+        <div class="four">four</div>
+        <p class="add-on">add on</p>
+        <hr>
+        <div>
+            <h2>Title</h2>
+            <p>P inside Div</p>
+            <p class="nesting">P inside Div with class</p>
+        </div>
+        <p class="nesting">P outside Div</p>
+        <hr>
+        <div class="name">Mohamed Soliman</div>
+        <hr>
+        <div class="name">Mohamed Ahmed Soliman</div>
+        <hr>
+        <div class="name">Mohamed Ahmed Soliman Hussein</div>
+        <hr>
+        <div class="overflow">
+            https://elzero.org/newxdsfdsfsdfsdfsdfsdfdsfdsfdsfsfsdfsfsfdsfdsfsfdsf/
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Sapiente illo aliquam culpa quod saepe ipsam voluptas laboriosam unde accusamus,
+            sunt impedit hic. Nulla ipsum magni sapiente quisquam vero, distinctio itaque.
+        </div>
+        <hr>
+        <div class="text">
+            <h2>learning text in CSS</h2>
+        </div>
+        <hr>
+        <div class="text2">
+            <h2>learning text in <img class="v-aline" src="https://via.placeholder.com/60" alt /> CSS 2 .</h2>
+        </div>
+        <hr>
+        <div class="decor">
+            <h2>text decoration and transformation</h2>
+        </div>
+        <hr>
+        <a class="google" href="https://www.google.com/">Google</a>
+        <hr>
+        <div class="space">
+            <h2>Spacing Lesson</h2>
+            <div>
+                Spacing LessonSpacing LessonSpacing LessonSpacing LessonSpacing LessonSpacing LessonSpacing LessonSpacing LessonSpacing Lesson
+            </div>
+            <div>sdfghqwertyuioplkhgfdsxcvbnmzxzcdvfdvjndigniebgivaoebfviouae-bvoiebavuob</div>
+        </div>
+        <hr>
+        <div class="text-overflow">
+            <h2 >Text OverFlow Lesson,Hello </h2>
+            <!-- <h2 title="Text OverFlow Lesson,Hello">Text OverFlow Lesson,Hello </h2> -->
+        </div>
+        <hr>
+        <div class="family"> 
+            <div class="Inheritance">
+                <h3 > Welcome to Inheritance Lesson, Hello</h3>
+                <p> Inheritance Lesson </p>
+            </div>
+        </div>
+    
+        <hr>
+        <span class="testinline">  Welcome to Text-align with inline level, Hello</span>
+        <hr>
+        <div class="font">
+            <p>Welcome to Font-Family Lesson , Hello F</p>
+            <p>Welcome to Font-Family Lesson , Hello F</p>
+        </div>
+        <div class="font-size">
+            Welcome to Font-Size Lesson
+            <span class="font-test">Hello</span>
+        </div>
+        <hr>
+        <div class="vmin">
+            <div class="vmin2">Vim and Vmax</div>
+        </div>
+        <hr>
+        <div class="fStyle">Welcome to Font-Style Lesson</div>
+        <hr>
+        <div>
+            <a href="#">Google</a>
+            <span>Test</span>
+            <button class="click">Click</button>
+            <hr>
+            <p class="grab">Test P</p>
+            <p class="move">Test P</p>
+            <p>Test P</p>
+        </div>
+        <hr class="hrmargin">
+        <div class="parent">
+            <div>Product one</div>
+            <div>Product Two</div>
+            <div>Product Three</div>
+            <div>Product Four</div>
+            <div>Product Five</div>
+            <p class="clear"></p>
+        </div>
+        <p class="pmargin">This is P for Testing Float</p>
+        <hr>
+        <div>
+            <h2 class="trans">Tranparent</h2>
+            <h2 class="opac">Opacity</h2>
+        </div>
+        <hr>
+        <div class="position">
+            <div class="pos1">Position1</div>
+            <div class="pos2">Position2</div>
+        </div>
+        <div class="pos3">position3</div>
+        <div class="pos4">position4</div>
+        <div class="bigboss">
+            <div class="pos5">Position5</div>
+        </div>
+        <div class="fixed">Fixed</div>
+        <div class="sticky">Sticky</div>
+        <hr>
+        <div class="zindex"> 
+            <div class="index1">Z-index</div>
+            <div class="index2">Z-index</div>
+            <div class="index3">Z-index</div>
+        </div>
+        <hr>
+        <ul class="ul-parents">
+            <li class="li-sons">HTML</li>
+            <li class="li-sons">CSS</li>
+            <li class="li-sons">
+                JS
+                <ul class="ul-parents">
+                    <li class="li-sons">Reactjs</li>
+                    <li class="li-sons">Vuejs</li>
+                    <li class="li-sons">Angula</li>
+                </ul>
+            </li>   
+        </ul>
+        <hr>
+        <table class="table-styling">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Age</td>
+                    <td>Email</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mohamed</td>
+                    <td>33</td>
+                    <td>Email@Email.com</td>
+                </tr>
+                <tr>
+                    <td>Ahmed</td>
+                    <td>33</td>
+                    <td>Email@Email.com</td>
+                </tr>
+                <tr>
+                    <td>Soliman</td>
+                    <td>33</td>
+                    <td>Email@Email.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <div class="psudo-one">Normal Element</div>
+        <hr>
+        <div class="psudo-two"></div>
+        <hr>
+        <a class="psudo-a" href="https://www.google.com/">Link1</a>
+        <a class="psudo-a" href="https://www.twitter.com/">Link2</a>
+        <a class="psudo-a" href="https://www.linkedin.com/">Link3</a>
+        <hr>
+        <form action="">
+            <div>
+                <input class="psudo-in" type="text">
+            </div>
+            <div>
+                <input class="psudo-ch" type="checkbox" >
+                <label for="">Testing Check</label>
+            </div>
+        </form>
+        <hr>
+        <div class="psudo-el1">
+            <span>L</span>orem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+             impedit perspiciatis totam enim quas nostrum! Recusandae ad, 
+             asperiores dolores corrupti minima, iure itaque omnis sapiente iste voluptate,
+              ipsum molestiae amet.
+        </div>
+        <hr>
+        <div class="psudo-el2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+             impedit perspiciatis totam enim quas nostrum! Recusandae ad, 
+             asperiores dolores corrupti minima, iure itaque omnis sapiente iste voluptate,
+              ipsum molestiae amet.
+        </div>
+        <hr>
+        <div class="psudo-el3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+             impedit perspiciatis totam enim quas nostrum! Recusandae ad, 
+             asperiores dolores corrupti minima, iure itaque omnis sapiente iste voluptate,
+              ipsum molestiae amet.
+        </div>
+        <hr>
+        <div class="psudo-el4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+             impedit perspiciatis totam enim quas nostrum! Recusandae ad, 
+             asperiores dolores corrupti minima, iure itaque omnis sapiente iste voluptate,
+              ipsum molestiae amet.
+        </div>
+        <hr>
+        <div class="psudo-parent">
+             <div class="psudo-user">O</div>
+            <div class="psudo-one1" >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nisi unde sed illo nemo totam rem cum, incidunt quia est mollitia recusandae 
+                    exercitationem aliquid expedita! Quas, maiores ullam. Iusto, commodi quod?
+                    <!-- <span class="pipline"></span> -->
+            </div>
+        </div>
+        <div class="psudo-parent">
+            <div class="psudo-user">A</div>
+            <div class="psudo-one1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nisi unde sed illo nemo totam rem cum, incidunt quia est mollitia recusandae 
+                    exercitationem aliquid expedita! Quas, maiores ullam. Iusto, commodi quod?
+                    <!-- <span class="pipline"></span> -->
+            </div>
+        </div>
+        <div class="psudo-parent">
+            <div class="psudo-user">E</div>
+            <div class="psudo-one1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nisi unde sed illo nemo totam rem cum, incidunt quia est mollitia recusandae 
+                    exercitationem aliquid expedita! Quas, maiores ullam. Iusto, commodi quod?
+                    <!-- <span class="pipline"></span> -->
+            </div>
+        </div>  
+        <hr>
+        <div class="psudo-parent2">
+             <div class="psudo-user2">x</div>
+            <div class="psudo-one2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nisi unde sed illo nemo totam rem cum, incidunt quia est mollitia recusandae 
+                    exercitationem aliquid expedita! Quas, maiores ullam. Iusto, commodi quod?
+                    <!-- <span class="pipline"></span> -->
+            </div>
+        </div>
+        <div class="psudo-parent2">
+            <div class="psudo-user2">y</div>
+            <div class="psudo-one2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nisi unde sed illo nemo totam rem cum, incidunt quia est mollitia recusandae 
+                    exercitationem aliquid expedita! Quas, maiores ullam. Iusto, commodi quod?
+                    <!-- <span class="pipline"></span> -->
+            </div>
+        </div>
+        <div class="psudo-parent2">
+            <div class="psudo-user2">z</div>
+            <div class="psudo-one2" data-text="attribute psudo element">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nisi unde sed illo nemo totam rem cum, incidunt quia est mollitia recusandae 
+                    exercitationem aliquid expedita! Quas, maiores ullam. Iusto, commodi quod?
+                    <!-- <span class="pipline"></span> -->
+            </div>
+        </div>
+        <hr> 
+        <div class="counter-parent">
+            <p class="counter-sons">Mohamed</p>
+            <p class="counter-sons">ahmed</p>
+            <p class="counter-sons">soliman</p>
+        </div>
+        <hr>
+        <div class="counter-parent2"><p class="counter-sons2">Mohamed</p></div>
+        <div class="counter-parent2"><p class="counter-sons2">Ahmed</p></div>
+        <div class="counter-parent2"><p class="counter-sons2">Soliman</p></div>
+        <hr>
+        <div class="counter-big">
+            <div class="big-parent2"><p class="big-sons2">Mohamed</p></div>
+            <div class="big-parent2"><p class="big-sons2">Ahmed</p></div>
+            <div class="big-parent2" ><p class="big-sons2">Soliman</p></div>
+        </div>
+        <hr>
+        <div class="psudo-attr" data-text="attribute psudo element">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Mollitia, quis magnam. Adipisci quo modi fugit, itaque repudiandae voluptates doloremque 
+            in explicabo hic? Magnam, repellendus! Repudiandae accusantium quae maxime minima 
+            consectetur!
+        </div>
+        <hr>
+        <ul class="psudo-ul">
+            <li>One</li>
+            <li>One</li>
+            <li>One</li>
+            <li>One</li>
+            <li>One</li>
+        </ul>
+        <hr>
+        <div class="radius"></div>
+        <hr>
+        <div class="boxshadow">BOX Shadow</div>
+        <hr>
+        <div class="box-model">
+            <div class="boxone">One</div>
+            <div class="boxone">One</div>
+        </div>
+        <hr>
+        <div>
+            <div class="blue box"></div>
+            <div class="red box"></div>
+            <div class="clear2"></div>
+            <div class="green box"></div>
+        </div>
+        <hr>
+        <div class="transition">One</div>
+        <hr>
+        <div class="important" style="background-color:red">Iportant Declaration</div>
+        <hr>
+        <div class="margin-collapse">
+            <div class="margin1"></div>
+            <div class="margin2">
+                <div class="marginson1"></div>
+                <div class="marginson2"></div>
+            </div> 
+        </div>
+        <hr>
+        <div class="var">Main Div</div>
+        <h2 class="var2">Main Title</h2>
+        <p class="var3">My paragraph</p>
+        <a class="var4" href="">My Link</a>
+        <div class="localvar">Local var</div>
+        <hr>
+        <h3>Flex</h3>
+        <div class="flex">
+            <div class="oneflex">One</div>
+            <div class="twoflex">Two</div>
+            <div class="threeflex">Three</div>
+            <!-- <div>Four</div>
+            <div>Five</div> -->
+        </div>
+        <hr>
+        <h3>Float</h3>
+        <div class="float">
+            <div class="onefloat">One</div>
+            <div class="twofloat">Two</div>
+            <div class="threefloat">Three</div>
+            <!-- <div>Four</div>
+            <div>Five</div>  -->
+        </div>
+        <hr>
+        <div class="center">Center</div>
+        <hr>
+        <div class="flex1">
+            <div class="oneflex1">One</div>
+            <div class="twoflex1">Two</div>
+            <div class="threeflex1">Three</div>
+            <div class="fourflex1">Four</div>
+            <div class="fiveflex1">Five</div>
+        </div>
+        <hr>
+        <div class="flex2">
+            <div class="oneflex2">1</div>
+            <div class="twoflex2">2</div>
+            <div class="threeflex2">3</div>
+            <div class="fourflex2">4</div>
+            <div class="fiveflex2">5</div>
+            <div class="sixflex2">6</div>
+        </div>
+        <div class="inline-flex">Inline-flex</div>
+        <hr>
+        <img class="imgfilter"src="../HTML-Zero/imgs/black.jpg"alt="">
+        <hr>
+        <div class="gradients"></div>
+        <hr>
+        <input type="text">
+        <a class="pointerevent" href="https://google.com">Google</a>
+        <p class="caretcolor" contenteditable="True">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Temporibus debitis eaque fugiat. Animi saepe voluptatem magni eum totam accusantium nam,
+             ex quas voluptatibus necessitatibus libero? Nemo amet alias consequatur dolor.
+        </p>
+        <hr>
+        <div class="grid-parent">
+            <div class="grid1">1</div>
+            <div class="grid2">2</div>
+            <div class="grid3">3</div>
+            <div class="grid4">4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div class="grid9">9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+            <div>14</div>
+            <div>15</div>
+            <div>16</div>
+            <div>17</div>
+            <div>18</div>
+        </div>
+        <hr>
+        <div class="grid-parent2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div>
+        <hr>
+        <div class="img-2d">
+            <img src="../HTML-Zero/imgs/black.jpg" alt="">
+        </div>
+       <div class="two-d">Transform</div>
+       <hr>
+       <h2 class="skew">Test Title</h2>
+       <div class="translate">Transform</div>
+       <hr>
+       <div class="main-origin">
+            <div class="origin">
+                <span class="originspan"></span>
+                <span class="xaxis"></span>
+                <span class="yaxis"></span>
+                <div class="transform2">Transform</div>
+            </div>
+       </div>
+       <hr>
+       <div class="main-origin1">
+            <div class="origin1">
+                <span class="originspan1"></span>
+                <span class="xaxis1"></span>
+                <span class="yaxis1"></span>
+                <span class="zaxis1"></span>
+                <div class="transform3">Transform</div>
+            </div>
+        </div>
+        <hr>
+        <div class="backface">
+            <div class="backfacebox">
+                <div class="face front">Front</div>
+                <div class="face back">Back</div>
+            </div>
+        </div>
+        <hr>
+        <div class="anim-parent">
+            <div class="animation">Animation</div>
+        </div>
+        <hr>
+        <div class="spinn-parent">
+            <div class="spinner"></div>
+        </div>
+        <hr>
+        <div class="color-parent">
+            <div class="coloring"></div>
+        </div>
+        <hr>
+        <div class="load">
+            <div class="one-load"></div>
+            <div class="two-load"></div>
+            <div class="three-load"></div>
+        </div>
+        <hr>
+        <input type="text" placeholder="please input here" required> 
+        <div>Selector</div>
+        <hr>
+        <div class="queries">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <hr>
+        <div class="framework">
+            <div class="framework-child center-position circle text-center">Child</div>
+        </div>
+        <div class="product-parent">
+            <div class="framework-product center-position circle text-center">Product</div>
+        </div>
+        <hr>
+        <div class="global-value">
+            <span>Span</span>
+            <strong>Strong</strong>
+            <span>Span</span>
+            <p>Paragraph</p>
+            <button class="global-button">Button</button>
+        </div>
+        <div class="global-value">
+            <span>Span</span>
+            <strong>Strong</strong>
+            <span>Span</span>
+            <p>Paragraph</p>
+            <button>Button</button>
+        </div>
+        <div class="center-text"><span class="cent">CENTER</span></div>
+        
+    </body>
+</html>

@@ -1,0 +1,66 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.grid-page {
+    display: grid;
+    /* vh = viewport height or vw= viewport width they allow to size elements and font sizes as percenatge 
+    of the total width or height of the user's screen (the viewport) 
+    but normal percentage is percentage of the element's parent*/
+    height: 100vh;
+    background-color: #eee;
+    grid-template-columns: repeat(10, 1fr);
+    /* we want three rows ( header / content and sidebar / footer) */
+    grid-template-rows: 50px auto 50px;
+    /* that's means that you will gove logo (h2) 3 columns and nav(nav (ul)) 8 columns */
+    /* each "" mean single row */
+    /* if you want to put empty column you can write .  */
+    grid-template-areas: 
+    "logo logo nav nav nav nav nav nav nav nav " 
+    "cont cont cont cont cont cont cont . side side"
+    "footer footer footer footer footer footer footer footer footer footer";
+}
+
+/* to remove bullets */
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+}
+
+
+h2 {
+    grid-area: logo;
+    background-color: red;
+    color: white;
+}
+
+nav {
+    grid-area: nav;
+    background-color: blue;
+    color: white;
+}
+
+section {
+    grid-area: cont;
+    background-color: yellow;
+    color: black;
+}
+
+aside {
+    grid-area: side;
+    background-color: green;
+    color: white; 
+}
+
+footer {
+    grid-area: footer;
+    background-color: blueviolet;
+    color: white;
+}

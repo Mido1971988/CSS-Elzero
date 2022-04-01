@@ -1,0 +1,2812 @@
+/* p is selector (from index.html) and you can use name of tag 
+or class but you should write . before name of class 
+or id you should write # before name of id 
+next example ( p or .my_p or #my_p*/
+
+/* p {
+    color: green;
+} */
+
+.special {
+    color: red;
+}
+
+.background {
+    color:maroon;
+    /* background-color: green; */
+    /* background-color:#00ff00 ; Hexadecimal maximum value of each color is ff 
+    opacity: 0.5; when you use opacity alone also the letters (child element) will be also transparent */
+    /* background-color: rgb(0,255,0,0.5); */
+    /* rgb = Red Green Blue maximum no for each color is 255 
+    if all 255 will be white if all zero will be Black 
+    alpha channel is transparencies */
+    background-color: hsl(166, 73%, 62%);
+    /* hsl(hue, saturation, lightness) */
+    background-image: url("../../HTML-Zero/imgs/cover2.jpg");
+    background-repeat: no-repeat; /* Default value is repeat will repeat the image on x an y 
+    if you want to repreat only on x axis (repeat-x) if on y (repeat-y)*/
+    background-attachment: scroll; /* Default value is scroll (background will not scroll with you and will be at same location at top of page
+    but background-attachment: fixed; is moving with you during scrolling*/
+    /*background-position: center;*/ 
+    /*left top, left bottom, left center ,right top , right bottom, right center, center center
+    if you did not write the 2nd word will be by default center */
+    /*background-position: 500px 300px;*/ /* first value will move from left and 2nd value from above */
+    /* fixed will not work good with background-position because when you change it to fixed it will move relative to the webpage not the background*/
+    /* you can use % or px 50% 50% will be center */
+    background-size: cover;
+    /*default value is auto (put the img with it's original size
+    cover stretch the img to fit the background
+    contain difference between contain and cover is cover will cut the img when you change the size of screen 
+    but contain the img should be visible in all condition it will make the img smaller but visible*/
+    /* you can also change the size of img by Background-size = 100px 200px */
+    
+}
+
+.background1 {
+    background-color:lightgreen;
+    /* padding: 100px; */
+    /* top right bottom left ( Clockwise ) and padding accept % or px but not negative*/
+    /*if you write only one value this value will be same at 4 directions */
+    /* padding: 100px 150px; */
+    /* if you write two or three values the missing values will take same opposite value 
+    last exp. top 100px right 150px so bottom will take 100px and left wil take 150px */
+    padding : 0px 0px 20px;
+    /* if you want to enter only one value for padding you can give other values 0 
+    and here we did not write the last value because it will take 0 fom opposite side
+    or you can easily write padding-bottom: 20px;  */
+    margin: 20px;
+    /* difference between margin and padding that margin outside background but padding from inside
+     margin accept negative value because magin from outside and can move to other position on web page
+    but padding inside background and text starts from the border of this background can't go outside
+    also margin accepts % */
+    width: 70% ;
+    /* margin-left: 15% ; */
+    /* if we want to change the position of background inside web page we use width and margin by % 
+    to know it will fit the screen but px in css file not like webpage */
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: auto;
+     /* or you can better auto for all direction*/
+    /* auto horizontally center the element within it's container and margin-top and margin-bottom by default is 0*/
+    /* auto will only work with block elements not inline or inline-block because inline elements does not have width and inline-block default value of auto in margin-left and margin-right is 0 
+    inline elements accept only vertical margin and padding ( it will show on inspect that have margin and padding at all directions but it will not affect the adjacent content from top or bottom only from left and right 
+    to move child inside parent using margin you should add first border or padding to parent bacause of margin collapse
+    if you did not separate between parent and child by padding or border the margin will collapse and if you add to child margin-top:10px
+    and parent margin:0; so will collapse and final margin for both will be 10px then parent to move dwon 10px instead of moving 
+    child inside parent 10px */
+    /* or you can use auto function it's built in in Browser */
+    /* you are editing a background inside this container <div> 
+    and this container take all the width in limited length that why you can adjust width 
+    but every container <div> have limited length*/  
+    border-width: 10px;
+    border-color: red blue black yellow;
+    border-style:solid ridge dashed dotted;
+    /* border: 10px red solid; */
+    /* border: 10px red blue solid dotted;  */
+    /* in shorthand border you can only add one value from each attribute*/
+    
+}
+
+.background2 {
+    background-color: cornflowerblue;
+    width: 300px;
+    padding: 10px;
+    border: 10px solid red; /* box sizing:border-box it prevent border to count in element width*/
+    outline: 10px solid green; /* outline outside the element and does not count in his width */
+    /* in outline you cant change color or size or style of each direction all 4 direction will be the same*/
+    
+}
+
+.Block {
+    /* Block element
+    - take full width if no width
+    - add line break before and after 
+    - accept padding , margin, width (respect every things) */
+    background-color: coral;
+    padding: 10px;
+    margin: 10px;
+}
+
+.Inline {
+    /* Inline
+    - Elements at same line 
+    - do not add line Break
+    - does not accept ( width , height ) but accept padding and margin-left and margin-right
+     */
+     background-color: darkcyan;
+     margin: 20px;
+     width: 200px;
+     padding: 15px;
+     display: block; /* here we override the inline attribute of span and change it to block */
+
+}
+
+.Mix {
+    /* Inline-Block
+    - Elements at same line 
+    
+    - accept padding , margin, width (respect every things)
+     */
+    background-color:dimgray;
+    display:inline-block ;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    height: 10px;
+}
+
+.visible {
+    background-color: goldenrod;
+    margin: 10px;
+    display: none; /* none means not visible  // used when you press on list to view items inside 
+    when you press display block when you press again display none */
+}
+
+.visible1 {
+    background-color:lightseagreen;
+    margin: 10px;
+    visibility: hidden;
+    /* difference between visibilty and display none that 
+    when you write visible hidden the element will still have it's space 
+    but with display none it will lose it's space */
+}
+
+.visible2 {
+    background-color: mediumspringgreen;
+    margin: 10px;
+}
+
+.one {
+   
+    border-bottom: 2px solid red;
+    color: red;
+   
+}
+.two {
+ 
+    border-bottom: 2px solid green;
+    color: green;
+   
+}
+.three {
+    
+    border-bottom: 2px solid blue;
+    color: blue;
+   
+}
+.four {
+    
+    border-bottom: 2px solid black;
+    color: black;
+ 
+}
+/* Grouping */
+.one,
+.two,
+.three,
+.four,
+.add-on {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #EEE;
+}
+
+/* nesting */
+/* div p {
+    color: red;
+} you can use div p in nested elements to reach only p that inside <div> */
+div .nesting { /* if p inside <div> and have class */
+    color:red; 
+} 
+
+.nesting {
+    color: blue;
+} /* when you give the element two colors it will take the last one 
+but if it's nested inside <div> it will prefer the color with div .nesting {} */ 
+
+.name {
+    background-color: blue;
+    margin: 10px;
+    display: inline-block; 
+    /* width: fit-content; you have two options to make width fit the element 
+    // you can use display inline-block or using width: fit-content 
+    but it's better to use width: fit-content  */
+    min-width: 400px; /* if you want the width to stretch when you add more text 
+    there is  also max-width if you want to put limit*/
+    min-height: 40px; /* like width // default value of height and width is auto*/
+}
+
+ .overflow {
+     width: 150px;
+     height: 150px;
+     background-color:darkgrey;
+     margin: 20px auto;
+     border-radius: 6px;
+     overflow: hidden; /* when the text overflow from background it will be hidden // default visible*/
+     /* overflow: scroll; will add scroll to scroll the text inside container but disadvantage of scroll 
+     if the text not big and do not go outside the container it still give you cursors for scrolling */
+     overflow:auto; /* this is better than scroll because if the text not big it will not give you cursors for scrolling */
+     /* overflow-y: hidden;
+     overflow-x: auto;*/
+ }
+
+ .text {
+     background-color:silver ;
+     color: blue ;
+     /* H-shadow(horizontal) , V-shadow(vertical) , Blur, Color */
+     text-shadow: 1px 1px 1px red; 
+ }
+
+ .text2 {
+     background-color: #eee;
+     text-align:center;
+     /* direction  ltr = left to right // rtl = right to left */
+     direction: rtl; 
+     /* difference between align and direction is align move the text to different location but does not change the direction of this text */
+ }
+
+.v-aline {
+    vertical-align: top;
+    /* vertical-align works only with ( inline - inline-block - table-cell elements(try this on file test-table.html )*/
+}
+
+.decor {
+    background-color: gray;
+    text-decoration: underline; /* for example underline or overline */
+    text-transform: capitalize; /* first letter will be capital for all words   */
+
+}
+
+.google {
+    background-color: red;
+    color: white;
+    padding: 12.5px 25px;
+    display: inline-block;
+    border-radius: 4px;
+    text-decoration: none; /* to remove the underline from the link */
+}
+
+.space {
+    background-color: gray;
+    letter-spacing: 4px;
+    word-spacing: 10px; /* spaces between words */
+    text-indent: 100px; /* will give you space before text */
+    /* difference between this and align that you can write by px 
+    and you can move the text ouside the webpage */
+    line-height: 2.5; /* spaces between lines the no means 2.5 x font-size */
+    width: 800px;
+    /* white-space: nowrap; usually when you have a width and the text reach the max width
+     it will move to next line at next space but with this it will not move to next line and 
+     will continue at same line ouside background width */
+     word-break:break-all; /* when you reach the max width it will break the word */
+     /* word-break:break-word; will break the word at specific characters like "-" "/" */
+}
+
+/* we have 
+word-break // word-wrap // overflow-wrap
+word-break: break-word; = word-wrap: break-word = overflow-wrap: break-word = overflow-wrap: anywhere => all of thoses has same effect ( diefference between anywhere and break-word is anywhere calculate min-content intrinsic sizes 
+word-break: break-all will try to add maximum letters at each line 
+word-break works good with flex and grid but word-wrap and overflow-wrap not except overflow-wrap: anywhere
+white-space:nowrap will disable all of those
+*/
+
+.text-overflow {
+    background-color: chartreuse;
+    padding: 10px;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* to put ... and this means the text not completed 
+    and there is a part of text ouside width of background and hidden */
+
+}
+.text-overflow:hover {
+    overflow: visible; /* when you point to the text by mouse the hidden part will apear 
+    you can use title attribute at HTML go see there */
+}
+
+
+
+.family{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    padding: 30px;
+    background-color:blue;
+    border: 10px solid;
+    border-color:red;
+}
+    
+
+/* elements will not inherit every things from family like ( padding and background) 
+and will inherit ( text-align and font size) if the element have a default font-size like <h3> 
+it will not inherit font-size and if you want to force it to inherit something 
+like (padding and background) you must write it background: inherit;   */
+
+.Inheritance {
+    
+    background-color: gray;
+    border: 2px solid;
+    border-color: inherit;
+    padding:inherit;
+    
+}
+/* if you have grand-father and father and you want to inherit from grand-father 
+you should write inherit at son and also to the father    */
+
+.Inheritance p 
+{
+    border: 2px solid;
+    border-color: inherit;
+    padding:inherit;
+    
+}
+
+.testinline {
+    display: inline-block;
+    background-color: gray;
+    text-align: center;
+    width: 100%;
+    /* margin-left :35%;  */
+    /* text-align not working with inline element because inline element does not have enough width 
+    to move to the center of the webpage but it will work with inline-block elements 
+    if you give them the width (width:100%;) and it will for sure works with block elements 
+    because it have full width  */
+}
+
+body {
+    font-family: "cairo", sans-serif;
+    
+    
+}
+/* font family = you gave the website more than one option of fonts if the first one not applicable
+ it will use the second one */
+ /* you can take fonts links from here https://fonts.google.com/ and add thoses links to the Head and then write font-family at body*/
+.font {
+    background-color: #ddd;
+    padding: 10px;
+    
+}
+/* CSS Units
+-px
+-em = times
+-rem = Root time
+-vw (viewport width) 
+-percentage
+Read 
+-vmin if h < w will take vh // if w < h will take vw
+-vmax if h > w will take vh // if w > h will take vw
+-vh (viewport height)  */
+
+/* default Font size for Webpage is 16px but 1em not means 16px it means 1 time 
+of font-size inherited from father if font size of for exp. <div> is 20 
+then 2em for <span> will be 40px not 32px
+ch (character unit)  is width of 0 which is 10px  */
+
+/* if you used rem it will inherit the font-size from Root element ( html tag) 
+and default value for this tag is 16px so if you write 2rem then will be 32 px  */
+
+/* difference between rem and em 
+rem = Root em will inherit from Root
+em will inherit from Parent  */
+
+/* percentage is percentage of font-size of father so if you write 50% and 
+the font-size of father is 20px so the font-size of son is 10px */
+
+/* vw= view port width 1vw means 1% of width of webpage for exp. if the width of webpage 900 
+then the 1vw=9px this method is very good because if you change the wepage size 
+it will change the font-size to adapt the new size of webpage */
+
+/* you can use vmin with font-size or anything else like padding 
+here we wrote font-size:10vmin means when the width or height of wepage become very small the size of text will be smaller to be fit to the screen 
+we use this instead of media queries */
+
+/* it's better to use vmin rather than vw because if we use vw at extremly large screen the Text will be tooo Large */
+.vmin {
+    background-color: tomato;
+    min-height: 10vmax;
+}
+
+.vmin2 {
+    color: white;
+    font-size: 10vmin;
+    text-align: center;
+   
+}
+
+.font-size {
+    font-size: 20px;
+}
+
+.font-test {
+    font-size: 2vw;  
+}
+
+.fStyle {
+    font-style: italic;
+    font-variant:small-caps; /* will convert letters to capital but smaller size */
+    font-weight:900; /*from 100 to 900 and the used font must support this no. of front weight */
+    /* if you want to rest these values you can write font-weight/style/variant:normal  */
+}
+
+.click {
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-weight: bold;
+    cursor: pointer; /* means that element is clickable */
+}
+
+.grab {
+    cursor: grab;
+}
+
+.move {
+    cursor: move;
+}
+
+.parent {
+    /* background-color: red; */
+    /* padding: 10px; */
+    border: 10px solid  blue;
+    /* overflow: hidden; */
+    /* height: 16px; */
+    
+}
+
+.clear {
+    clear: both; 
+    /* better way to solve problem of float but you should add this clear 
+    inside the container but different tag because we don't want the tag with clear style 
+    to be counted as elements that will float also */
+    /* the clear property is used to specify that which side of floating element are not allowed to float 
+    / clear:both means floatings elements are not allowed to float on both sides */
+    /* in this case the elements float above the container ( have no width) and the upper border of container appears 
+    above floated elements and  lower border is below the floated elements once you write clear:both; 
+    now it's forbidden any elements to be at same level of floated elements so the lower border will shift down 
+    and the floated elements will be inside container*/
+    /* difference between overflow:hidden; and clear both 
+    if you wrote width of container and this width not enough for floated elements 
+    with overflow:hidden; the excess of floated elements will cut and will be hidden ( but you can use overflow:auto; instead ) 
+    but with clear:both; the browser will be confused there is no enough width to move lower border below floated elements 
+    so the elements will still float above lower borders */
+}
+
+/* overflow: hidden; because now the elements float outside normal Flow 
+    and when you use overflow:hidden it will return the elements to it's container because the parent now will creat BFC ( block formatting context )
+    and will contain it's childs (floated elements )
+    ( width of container will increase to fit the floated elements and remove any excess and the border of container will appear read about formatting context to understand this */
+
+    /* Fromatting-Context Link */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts */
+
+    /* we have 3 options to keep float inside it's container 
+ 1. overflow:hidden; or overflow:auto; 
+ 2. hack way 
+ hack way
+
+.overflow::after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    clear: both;
+    height: 0;
+} 
+ 3. clear:both; on element inside the container*/
+
+.parent div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #eee;
+    /* display: inline-block;
+    width: 25% by this way will 4 element be beside each other but 24% not 25% because inline-block add spaces between elements by default   */
+    /*width: calc(94% / 5);*/     /* see calculation below */
+    width: calc((100% - 90px) / 5);     /* see calculation below */
+    /* margin-left: 1%;  */
+    margin-left: 15px;
+    float: left; 
+    /* right if you write arabic // if you need 2 block level elements side by side you can use float */
+
+}
+/* (((Calculation 4 elements)))
+content width is : 100%
+5 spaces 1% * 5 = 5% from Content
+(if you want spaces only between elements then will be 3 spaces but here also space from right and left)
+95% Availabe Space
+4 Elements the Width 95% / 4  */ 
+/* (((Calculation 5 elements)))
+content width is : 100%
+6 spaces 1% * 6 = 6% from Content
+94% Availabe Space
+5 Elements the Width 94% / 5  */ 
+/* (((Calculation 5 elements %-px)))
+content width is : 100%
+6 spaces 15 * 6 = 90 from Content
+100%-90px Availabe Space
+5 Elements the Width (100% - 90px) / 5  */ 
+
+
+/* .hrmargin {
+    margin: 0;  you can remove the margin of hr by this way
+} */
+
+/* .pmargin {
+    margin: 0; 
+} */
+
+.trans {
+    background-color: rgb(255, 0, 0);
+    opacity: 0.1 ; /* transparent for every thing text and background */
+}
+
+.opac {
+    background-color: rgba(255, 0, 0, 0.1);
+/* opacity here  only for Background not for text */
+}
+
+.position {
+    margin-top: 10px;
+    color: white;
+}
+
+    /* position fixed and absolute will go outside layout but fixed related to layout and absolute related to it's parent 
+       position sticky is hybrid between relative and absolute
+    so if you write in HTML file one element ( position absolute or fixed or sticky ) before another element ( another position )
+    the 1st element will be below 2nd element 
+    if you write 1st element in HTML file after 2nd element the 1st element will be above
+    if both relative or static every element will be at his position no one can be above other one
+    if 2nd element have no position ( default value static position) 1st element (position absolute or fixed or sticky) will be always above 
+    at psudo element ( before or after ) will be considered that it's written after element so will be above always*/
+
+    /* to change position of son (position:absolute) inside container (position:relative or absolute) 
+    we use left:px/% or right:px/% or top:px/% or bottom:px/% or margin no problem
+    
+    to change position of son (float:left or right) inside container 
+    we use margin-left:px/% or margin-right:px/% or margin-top:px/% or margin-bottom:px/% 
+    
+    to change position of son (static default value) only margin no accepting left right top bottom*/
+
+    /* (((very important read please))) */
+
+    /* position absolute will move related to it's parent ( position : relative or absolute)
+    if you write right:0; top:0; so will move to corner top right because this means 
+    he will move till the right side has zero pixel on right and top side has zero pixel from the top
+    and if you write right:20px; will push the element to left side and vice verse 
+    but it will send the element to the right border of it's parent then will shift it to left*/
+
+
+    /* position relative will move related to it self not to it's parent
+    that's why when you write right:0; it will not move to right side like absolute because it 
+    move related to it self and right:0; means right side has zero pixel to it's related container 
+    but it related to it self so always it's zero pixel from right side */
+
+    /* position sticky will move related to the layout but also can't go outside it's parent
+    that's why right:; and bottom:; not working because you cant push the sticky element
+    outside it's parent if you want to move it use left and top this at english version of website 
+    at arabic version directions will be inverted 
+    to move it you can use px or % but be ware that px or % will calculated from the layout not it's parent*/
+
+    /* difference between position absolute and fixed that both will go outside work flow and both move related to viewport 
+    but when you move viewport by scrolling to view another content of webpage fixed will move with you but absolute not */
+
+ .pos1 {
+    background-color: red;
+    width: 100px;
+    position: static;
+    /* right: 0px; */
+    /* margin: 0px; */
+   
+}
+
+.pos2 {
+    background-color: green;
+    width: 100px;
+    position: relative;
+    /* position: static; */
+    /* bottom: 10px; */
+    /* margin: 0; */
+}
+
+.pos3 {
+
+    background-color: yellow;
+    width: 100px;
+    position: absolute;
+    /* right: 0; */
+}
+.pos4 {
+
+    background-color:aqua;
+    width: 100px;
+    position: relative;
+    /* right: 0; */
+}
+
+.pos5 {
+    background-color: red;
+    width: 100px;
+    position: absolute;
+    /* bottom: 20px; */
+    /* margin: 200; */
+    right: 0;
+    
+}
+
+/* if you want to move element inside other element(parent = bigboss) the parent should be relative 
+if the son element is relative it will move according to his position but if son absolute 
+it will move according to position of parent*/
+.bigboss {
+    width: 500px;
+    height: 300px;
+    background-color: blue;
+    position: relative;
+}
+
+.fixed {
+    background-color:red;
+    width: 100px;
+    position: fixed;
+    right:0;
+    top: 0;
+    /* fixed with page even with scrolling */
+}
+
+.sticky {
+    background-color:yellow;
+    width: 100px;
+    position:sticky;
+    bottom: 0;
+    left: 100%;
+    /* text-align: right; */
+    /* margin-left: 850px; */
+    
+}
+
+/* the element with highest z-index will be on the top
+if all elements don not have z-index the last element will be above
+if 2 elements have same z-index the last one will be above
+z-index will not work if no position mentioned it does not matter which position even if it absolute and have higher z-index 
+will be above relative or fixed 
+but static will be always below if you other element to be below static element give this element negative value of z-index 
+z-index = -1  every elements will be above him */
+.zindex {
+    padding: 10px;
+    width: 100px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.index1 {
+    background-color: red;
+    position: inherit;
+    padding: inherit;
+    width: inherit;
+    left: 20px;
+    top: 40px;
+    z-index: 3;
+}
+.index2 {
+    background-color: blue;
+    position: inherit;
+    padding: inherit;
+    width: inherit;
+    left: 15px;
+    top: 15px;
+    z-index: 2;
+}
+.index3 {
+    background-color: green;
+    position: inherit;
+    padding: inherit;
+    width: inherit;
+    left: 5px;
+    bottom: 5px;
+    z-index: 1;
+}
+
+.li-sons {
+    background-color: #EEE;
+    margin-bottom: 10px;
+
+}
+
+.ul-parents {
+    /* list-style-type:circle;
+    list-style-position: inside;   
+    list-style-image: url(""); */
+    /* shorthand  */
+    list-style: circle inside url("");
+    
+    /* to reset the ul remove list-style and padding */
+    /* list-style: none;
+    padding: 0; */ 
+} 
+
+.table-styling {
+    width: 100%;
+   border-spacing: 5px;
+   font-family: fantasy;
+}
+
+.table-styling td {
+    padding: 15px;
+    background-color: #EEE;
+    border: 1px solid #ccc;
+   
+}
+
+.table-styling thead td {
+    background-color:burlywood;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-color: blue;
+}
+
+.psudo-one {
+    background-color: red;
+    color: white;
+}
+
+.psudo-two {
+    background-color: #EEE;
+    width: 100px;
+    height: 100px;
+}
+
+.psudo-a {
+    color: green;
+    text-decoration: none;
+
+}
+
+/* we have 6 types of Psudo-elements
+1. First Letter
+2. First Line
+3. After
+4. Before
+5. marker
+6. selection */
+
+/* marker works only with li so it's always li::marker or you can write only ::marker */
+/* psudo class = special class will be active once you do special action like move cursor to link  */
+/* psudo classes like hover focus action */
+.psudo-a:hover {
+    color:red
+}
+
+/* when you check the box the next label will change it's color to red */
+.psudo-ch:checked + label {
+    color:red
+    
+}
+
+.psudo-a:visited {
+    color: yellow;
+}
+
+/* that's mean any empty div (no text inside or no child inside) will take this border if you need any empty tag you can write (:empty) */
+/* div:empty {
+    border: 5px solid red;  
+} */
+
+.psudo-in {
+    border: 2px solid red;
+}
+
+.psudo-in:focus {
+    border: 10px dotted blue ;
+    outline: none ; /* if you need to remove the default border of input ( called outline) */
+}
+
+/* ((old school)) */
+.psudo-el1 span {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+/* ((new school with psudo class)) */
+.psudo-el2:first-letter {
+    display: inline-block;
+    background-color:blue;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+    
+.psudo-el3:first-line {
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+}
+    
+.psudo-el4::selection {
+   background-color: black;
+   color: yellow;
+}
+
+.psudo-parent {
+    margin-bottom: 20px;
+    overflow: hidden;
+    
+    
+}
+
+
+.psudo-user {
+    background-color: #eee;
+    width: 50px;
+    margin-right: 20px; 
+    padding: 10px;
+    height: 55.5px;
+    float: left;
+    font-size: 50px;
+    text-align: center;
+}
+
+.psudo-one1 {
+    background-color: #eee;
+    padding: 10px;
+    width: 600px;
+    float:left;
+    position: relative;
+}
+
+/* ((old school)) to put line beside element ( see the line at webpage) is using span and give it styles */
+
+/* .psudo-one1 .pipline {
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    if you want to move outside parent element write negative value
+    right: -20px;
+    top: 0;
+    background-color: green;
+} */
+
+/* ((new school)) using psudo element  */
+
+/* this is the cursor  */
+.psudo-one1:before {
+    content:"" ;
+    width: 0px;
+    height: 0px;
+    left:-30px;
+    top:50%;
+    /* you can use margin-top = - half of element's height or you can use transform */
+    margin-top:-10px;
+    /* transform: translate(0, -50%); */
+    background-color: transparent;
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent green transparent transparent;
+} 
+
+
+/* this is the line after element  */
+.psudo-one1:after {
+    /* you should add content: ""; to make psudo elemet appear and you will find it at dev tools called (::after) 
+    if you write text at content the text will appear before the element*/
+    
+    content: ""; 
+    width: 10px;
+    height: 100%;
+    right: -20px;
+    top: 0;
+    background-color: green;
+    position: absolute;
+}
+
+
+
+
+
+.psudo-parent2 {
+    margin-bottom: 20px;
+    overflow: hidden;
+    counter-increment: members-counter;
+     /*counter-increment will count elements and give each element a no.  */
+    /* 2 steps look comments below */
+}
+
+.psudo-one2 {
+    background-color: #eee;
+    padding: 10px;
+    width: 600px;
+    float:left;
+    position: relative;
+    
+}
+
+
+.psudo-user2 {
+    background-color: #eee;
+    width: 50px;
+    margin-right: 20px;
+    padding: 10px;
+    height: 55.5px;
+    float: left;
+    font-size: 50px;
+    text-align: center;
+    
+}
+
+.psudo-one2:before {
+    /* we can add anything ( text , link  we wrote in attribute in element in HTML file go see there */
+    content:attr(data-text);
+    /* width: 0px;
+    height: 0px;
+    left:-30px; */
+    color: red;
+    display: none;
+ }
+
+
+ /* default display of psudo-elements is inline because it's the initial value of display: inline it will not accept height or weight
+position:absolute will accept width and height because it is outside normal flow and has it's own rules*/
+
+
+ /* you can use psudo-element and psudo-class together here when you move mouse to the element psudo-element will appear  */
+ .psudo-one2:hover:before {
+     display: inline-block;
+ }
+
+.psudo-one2:after {
+   /* we will write that name of counter-increment that we wrote on parent (members-counter)  */
+    content: counter(members-counter); 
+    position: absolute;
+    background-color: red;
+    color: white;
+    width: 20px;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    right: -10px;
+    top: 50%;
+    margin-top: -15px; 
+    /* margin-top always half-value of height after writing top:50%  */
+}
+
+.counter-parent {
+    counter-reset: names-counter 0;
+    /* 3 steps look comment below */
+    /* this initializes counter if you need zero-based index use -1  */
+}
+
+.counter-sons{
+    counter-increment: names-counter 1;
+    /* like += 1 in python add 1 every count  */
+}
+
+.counter-sons:before {
+    content: counter(names-counter) ". ";
+    /* return value of count */
+}
+
+.counter-parent2 {
+    counter-increment: namess-counter ;
+    /* 2 steps look comment below */
+   
+}
+
+
+
+.counter-sons2:before {
+    content: counter(namess-counter) ". ";
+    /* return value of count */
+}
+
+.counter-big {
+    counter-reset: namesss-counter 0 ;
+    /* 3 steps look comment below */
+    /* this initializes counter if you need zero-based index use -1  */
+}
+
+.big-sons2 {
+    counter-increment: namesss-counter 1;
+}
+
+.big-sons2:before {
+    content: counter(namesss-counter) ". ";
+    /* return value of count */
+}
+
+.psudo-attr:before {
+    content: attr(data-text); /* you can add also url()*/
+    font-weight: bold;
+    font-size: x-large;
+    color: white;
+    background-color: red;
+    width: 100px;
+    padding: 10;
+    display: none;
+
+}
+
+
+/* if youy elements have parent container ( with this you can controll count increment and you can start at any point you need counter-reset: namescounter 0 , 1 , 2 , 3 , 4 , ..... )
+    counter-reset: namescounter 0  ( at parent) 
+    counter-increment: namess-counter 1 ( at child) 
+    content: counter(namesss-counter)  ( at psudo-element)
+    
+    if your elements have no container parent ( with this you can controll count increment only counter-increment: namess-counter 2 )
+    counter-increment: namess-counter ( at element) 
+    content: counter(namesss-counter) ( at psudo-element)
+    */
+
+    /* you can do it by 2 or 3 steps
+    2 steps by adding counter-increment:list-counter 1 ; to real element and the content: counter(list-counter); at psudo element 
+    3 steps by adding counter-reset: list-counter 0; at parent  counter-increment:list-counter 1 ; to real element 
+    and the content: counter(list-counter); at psudo element  
+    with 3 steps you can determine the count start from where and every count add 1 or 2 or .... 
+    with 2 steps you can determine only every count add 1 or 2 or .... */
+
+.psudo-attr:hover:before {
+    display: inline;
+}
+
+
+.psudo-ul {
+    list-style: none; 
+    /* to reset the style of list */
+}
+.psudo-ul li {
+    position: relative;
+    
+}
+
+.psudo-ul li:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    left:-30px;
+    top:50%;
+    margin-top:-10px;
+    background-color: transparent;
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent green transparent transparent;
+    /* margin-bottom: 10px; */
+    /* margin-top negative will work but margin-bottom positive will not work because the rendering of browser is from above */
+
+}
+
+.radius {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 20px auto;
+    /* border-radius: 50%; */
+    /* if width and height are the same then there will be no difference between % and px
+    but if width and height not equal with px will take smallest value see pic to understant the difference between px and % */
+    /* if border-radius half of width and height the element will be circle
+    or you can write border-radius 50% */
+    outline: 10px solid yellow;
+    border-top-left-radius: 20px 20px; /*2 values for 2 corners */
+    border-bottom-right-radius: 20px 20px;
+}
+
+.boxshadow {
+    padding: 20px;
+    background-color: #EEE;
+    margin: 20px auto;
+    width: 300px;
+    /* text-align: center */
+    /* inset means shadow from inside and you must write it / outset means shadow from outside and it's the default you don't have to write it */
+    /* H-shadow / V-shadow / Blur / spread / color / inset or outset */
+    box-shadow: 9px 10px 5px 5px #909086;
+    /* you can add more than one shadow  */
+    /* box-shadow: 0px 10px 0px 0px yellow , 0px 20px 0px 0px black; */
+    /* (vendor prefixes) */
+    /* -webkit-box-shadow: inset 0 0 1px 1px red , 0 0 1px 1px blue ;
+    -moz-box-shadow: inset 0 0 1px 1px red , 0 0 1px 1px blue ;
+    -ms-box-shadow: inset 0 0 1px 1px red , 0 0 1px 1px blue;
+    -o-box-shadow: inset 0 0 1px 1px red , 0 0 1px 1px blue;
+    box-shadow: inset 0 0 1px 1px red , 0 0 1px 1px blue; */
+    /* https://pixelbrewco.com/index.php?step=blog&step2=post10 */
+}
+
+/* you can use wildcard ;)  */
+/* you can use wild card but you should add box-sizing: content-box to parent 
+because if you didnot it will reverse it's action you can also use vedor prefix 
+or not up to you */
+ 
+/* * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+} */
+
+.box-model {
+    width: 600px;
+    overflow: hidden;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ddd;
+    /* box-sizing: content-box; */
+ 
+}
+
+.boxone {
+    background-color: #eee;
+    width: 298px;
+    /* float: left; */
+    display: inline-block;
+    padding: 10px;
+    border: 10px solid red;
+    height: 60px;
+    /* box-sizing: content-box; */
+    box-sizing: border-box;
+    /* defaul value is content-box ( when you add padding or border  will add them 
+    to width and height and the 2nd element will move to next line )
+     but border-box will accept padding or border and will decrease the width and height 
+     to maintain the original values and the elements remain beside each other
+     but border-box does not accept margin or height or width once you increase one of them the element will move to next line  */
+}
+
+/* the difference between float and absolute position that float = the element float above other 
+elements if both float they will stand beside each other
+but with  absolute position the element exit the layout and other elements will take his place and he 
+will be below them */
+
+.blue {
+    background-color: blue;
+    float: right;
+}
+.red {
+    background-color: red;
+    float: right;
+}
+.green {
+    background-color: green;
+    /* margin-left: 10px; */
+    /* float: right;  */
+    /* here the green will be beside red */ 
+
+}
+
+/* second use of clear both is prevent not floated to shift up but you should write div tag with clear style before not floated element */
+.clear2 {
+    clear: both;
+}
+/* the clear property is used to specify that which side of floating element are not allowed to float / clear:both means floatings elements are not allowed to float on both sides */
+/* if you write clear div before red the red will float at next line because now it's not allowed any element to float at previous level
+that why we wrote clear div before green to stop it from shifting up .. it's like blocking previous level and no elements allowed to enter this level */
+
+
+ 
+/* we can divide selector if it's two words and more than one element have same 2nd word you can do like this */
+.box {
+    height: 100px;
+    width: 100px;
+}
+
+.transition {
+    background-color: #eee;
+    width: 200px;
+    height: 100px;
+    /* transition-duration: 5s; */
+    /* transition-delay: 0.2s; */
+    /* to change all proprites at Hover and this is the default Value */
+    /* transition-property: all; */
+    /* you can choose which properites you want to change the other proprites will change immediatly 
+    without duration or delay*/
+    /* transition-property: margin-left, margin-top ; */
+    /* transition-property: width ; */
+    /* transition-timing-function:ease; */
+    /* transition-timing-function:linear; */
+    /* ease = slow fast slow and this is the default value */
+    /* linear= same speed */
+    /* ease-in = slow fast fast */
+    /* ease-ut = fast fast slow  */
+    /* ease-in-out = slow-normal-slow */
+    /* transition-timing-function:ease-in-out; */
+    /* ((shorthand)) */
+    /* transition: width 3s, height 1s; */
+    /* transition: width 3s 1s linear, height 1s 2s ease; */
+    /* property , duration, delay , timing function  */
+    /* transition: all 10s 2s linear; */
+   
+}
+
+.transition:hover {
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 500px;
+    height: 200px;
+}
+
+.important {
+    /* important will override the internal or inline style 
+    even if you write in css file another color for this element it will also override it */
+    background-color:blue !important;
+    width: 250px;
+}
+
+/* margin-collapse happend vertically when 2 elements at same Formatting-context so there is no margin collapse for float and absolute
+because float and absolute will be outside normal flow*/
+
+/* Formatting Context Link */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts */
+
+
+.margin-collapse {
+    overflow: hidden;
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    background-color: #eee;
+}
+
+.margin1, .margin2  {
+    float: left;
+    width: 50%;
+    height: 100%; 
+    
+
+}
+
+.margin1 {
+    background-color: #ddd;
+}
+
+.margin2 {
+    float: left;
+    width: 50%;
+    height: 100%;
+    
+    
+}
+.marginson1 {
+    background-color:red;
+    height: 100px;
+    margin-bottom: 40px;
+}
+
+.marginson2 {
+    background-color:green;
+    height: 100px;
+    margin-top: 20px;
+    /* margin collapse when you add margin from element and add another margin from next element 2 margins will collapse and will be one margin for both  */
+    /* if 2 margins not equal the highest value will be the final margin collapse value */
+    /* collapse margin only vertical */ /*nesting does not prevent collapse */
+    /* 2 elements should be sticking to each other if there is anything between then margin will not collapse */
+}
+
+/* difference between * and :root ( psudo class) is * for each elements but :root for whole webpage 
+for exp :root { background-color:red; } will change the background color of whole page ( like html{} but :root will override it if both witten
+but *{ background-color:red; } will change background of each element inside webpage not the webpage itself  */
+
+/* :root {
+    --mainColor: blue;
+    --padding: 20px;
+} */
+
+/* var ( variablename, Fallback value) */
+/* fallback value = if variable color not availabe this will be 2nd option */
+/* there are two types of var global and local  */
+/* global variable means for all when you write it at :root{} 
+local varaible when you write it at element or parent*/
+
+/* usually we add variable at :root{} or you can write it at HTML tag on HTML file with style like
+<html lang="en" style="--main-color: blue;"> */
+.var {
+    background-color: var(--mainColor);
+    color: white;
+    padding: calc(20px + var(--padding)) ; /* you can calculate with var */
+
+}
+
+.var2 {
+    color:var(--mainColor);
+    background-color: #eee;
+    padding: var(--padding);
+
+}
+
+.var3 {
+    color: var(--mainColor);
+    border:2px solid  var(--mainColor);
+    padding:var(--padding);
+
+}
+
+.var4:hover {
+    color: var(--mainColor);
+}
+
+.localvar {
+    --mainColor: black; 
+    background-color: var(--mainColor);
+    padding: var(--padding);
+    color: white;
+    /* you can set local variable for each element and will override the variable in :root */
+}
+
+
+/* we can use wildcard instead of writing it to each element  */
+
+/* * {
+    box-sizing: border-box;
+} */
+
+
+/* Flex Container shrinks elements (width) to prevent overflow 
+(elements will go outside box only at rare case = when sum of their minimum width > parent's width) 
+no matter how many elements will you add it will shrink them to be at same line 
+even if you write at style of these elements margin or width of elements more than width of container 
+
+but justify-content:space-between or space-evenly or space-around you need to give the flex box free space 
+to create spaces between elements it will not shrink elements to create these spaces
+ */
+
+ /* flex-box childs will stretch to take height of parent because default-value of align-items is stretch and will not stretch to take width of parent because there is no justify-items in flex
+    grid childs will stretch to take full height and width because both availabe in grid ( align-items and justify-items )   */
+/* flex-box childs all will be at same line but in grid each child will take new line */
+
+
+.flex {
+    /* overflow: hidden; */
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    /* flex-direction: row-reverse; */
+     /* or you can use direction: rtl; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    /* flex-wrap: wrap; */ 
+    /* will move the fifth element to previous line not next line*/
+    /* flex-wrap: wrap-reverse;  */
+    /* this is shorthand for both flex-wrap and wrap-direction */
+    /* flex-flow: row wrap; */
+    /* default value flex-start  */
+    /* justify-content:flex-end; */
+    justify-content:center; 
+    /* to make space-between work you have to free space for it that's why we changed the the width from width: calc(100% / 3); 
+    to width: calc(98% / 3); or you can without space-between add margin to 2nd element directly 
+     the flex box will shrink items to handle this margin but float not 
+     with float if you change width: calc(98% / 3); to lower value
+     the extra space will be added to the end not between elements but with flex if you change it to lower value 
+     it will add the extra space between elements*/
+    /* justify-content: space-between; */
+    /* space-around will add space before and after elements for if you have 3 elements now you have 6 spaces left and right */
+    /* justify-content: space-around; */
+    /* to understand the difference between space-around and space-evenly see the pic in coding album */
+    justify-content: space-evenly;
+    /* default value of align-items is stretch; so when you put elements inside parent ( display:flex;) they will stretch to fill all height of parent ( there is no justify-items in flex that's why child will not stretch to take full width 
+       but if you give childs specific height they will not stretch or if you write ( align-items:flex-start; / align-items:flex-end; ) the childs will not stretch */
+    /* align-item: flex-start is vertical from up to down but justify-content:flex-start; is horizonatl from left to right  */
+    /* align-items: flex-start;  */
+    /* align-item: flex-end is vertical from down to up but justify-content:flex-end; is horizonatl from right to left  */
+    /* align-items: flex-end;  */
+    align-items: center; 
+    
+
+}
+
+ /* to move only one child on y-axis you can use 
+        ( align-self:flex-end; / align-self:flex-start; / align-self:center; ) 
+        or
+        margin-top:auto; will move the child to bottom  ( it means it will add all width on top side of child ) 
+        margin-bottom:auto; will move the child to top  ( it means it will add all width on bottom side of child ) 
+        margin-top:auto; and margin-bottom:auto; will center the child vertical
+
+    to move only one child on x-axis you don't have justify-self:; ( justify-self not work with flex work only with grid ) 
+         but you can use margin:auto; 
+        
+        margin-left:auto; will move the child to right ( it means it will add all width on left side of child ) 
+        margin-right:auto; will move the child to left ( it means it will add all width on right side of child ) 
+        margin-left:auto; and margin-right:auto; will center the child horizontal
+
+    you can use also position:absolute; to move childs but give the parent position:relative; if you need childs to move related to the parent if not childs will move related to webpage
+      */
+
+/* with display=flex you don't need overflow=hidden and float left  */
+/* flex-direction : row this is default value and will arrange elements at same line*/
+/* difference between float and flex that with float elements float and positions of them 
+will be beside each others and not affected by direction of webpage but flex it will arrange 
+elements beside each other according to direction of webpage so if you change direction to rtl 
+flex will change the position of elements but float you must give him direction float:right or left  */
+/* when we add fifth div to both flex and float -- flex will shrink items to keep all of them 
+at one line (if you want to force the fifth element to move to next line you should write 
+flex-warp: wrap; and it's default value flex-wrap;nowrap; ) but float fifth element will go to 
+next line because the fifth element have width and box-sizing = border-box will only accept 
+padding or border to keep element at same line*/
+
+.float {
+    overflow: hidden;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    direction: rtl;
+}
+
+.flex div {
+    background-color: red;
+    color: white;
+    /* float: left; */
+    width: 25%;
+    /* width: calc(100% / 3); */
+    /* we changed here to 98% because we want to add 2% margin at 2nd element by  */
+    /* width: calc(94% / 3); */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box; 
+        /* margin-right: 1%;
+        margin-left: 1%; */
+    
+    
+}
+
+.float div {
+    background-color: red;
+    color: white;
+    float: left;
+    /* width: 25%; */
+    /* width: calc(100% / 3); */
+    /* we changed here to 98% because we want to add 2% margin at 2nd element by justify-content: space-between; */
+    width: calc(94% / 3);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    /* direction: rtl; */
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+.onefloat {
+    height: 80px;
+}
+.twofloat {
+    height: 120px;
+}
+/* .threefloat {
+    margin-left: 1%;
+    margin-right: 1%;
+} */
+
+.oneflex {
+    height: 80px;
+}
+.twoflex {
+    height: 120px;
+}
+/* .threeflex {
+    margin-left: 1%;
+    margin-right: 1%;
+} */
+
+.center {
+    background-color: blue;
+    color: white;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    /* horizontal */
+    justify-content: center;
+    /* vertical */
+    align-items: center;
+    /* or you can use this way but will not be accurate beause line-height not accurate */
+    /* line-height: 200px;
+    text-align: center; */
+    /* or you can use position but to move the text (center) should be a child inside parent for exp. span inside div 
+    then you can move it but with flex box no need for that you can move text directly */
+    
+}
+
+/* .oneflex1 {
+    height: 80px;
+}
+.twoflex1 {
+    height: 120px;
+} */
+/* .threeflex1 {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.fourflex1 {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.fiveflex1 {
+    margin-left: 1%;
+    margin-right: 1%;
+} */
+
+.flex1 {
+    background-color: #eee;
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /* align-items work with elements but align-content work with line so of there is only one line so align-content has no effect */
+    /* difference between align-content and align-items is align items will arrange the elements vertical but also with spaces 
+    if the container big align-content will move all elements ( as one block without spaces between lines)   */
+    /* align-content: flex-start;  */
+    /* difference between justify-content: space-around; and align-content: space-around; that with justify the spaces between 
+    each element (horizontal) but with align spaces between lines (vertical) */
+    /* align-content: space-around; */
+    /* align-content: space-between; */
+   
+
+}
+
+.flex1 div {
+    background-color: red;
+    color: white;
+    width: calc(94% / 3);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box; 
+    
+
+}
+.flex2 {
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    /* display:flex; container (parent) itself act as block level element but display:inline-flex; container (parent) act as inline level element */
+    display: inline-flex;
+    /* flex-direction:column; */
+    height: 300px;
+    align-items: flex-start;
+    
+
+
+}
+
+.flex2 div {
+    background-color: red;
+    color: white;
+    width: 80px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box; 
+    margin-right: 5px;
+    /* default value of flex-grow is 0 which means no grow but 1 means all items will grow like each other to fill the remaining space */ 
+    
+    /* if one element have flex-grow:3; and the rest of elements 1 the element which have value 3 will grow by ration 3:1 
+    only if there is availabe space ( sum of elements width + margins < parent's width)
+    once the sum of elements width + margins = parent's width all elements will be same size */
+    
+    /* if one element have flex-grow:3; and the rest of elements default value 0 then the more space you give them 
+    the element which have value 3 will increase in size till the rest of elements reach their minimum width */
+
+    /* if one element have flex-shrink:3; and the rest of elements 1 the element which have value 3 will shrink by ratio 3:1 
+    only if there is no availabe space ( sum of elements width + margins > parent's width) */
+
+
+    /* if one element have flex-shrink:3; and the rest of elements value 0 then the more space you give them 
+    the element which have value 3 will decrease in size till reach it's minimum width the elements will exit flex-box because 
+    default value of flex-shrink is 1 ... it should be 1 because this how flex-box works 
+    ( shrink elements to keep elements at same line and inside box ) */
+
+    flex-grow: 1;
+    
+
+}
+
+/* .threeflex2 {
+    to override flex-grow: 1; in flex2 div you can write !important or write it a style in element i HTML file
+    because inline style stronger than external style 
+    flex-grow: 3 !important;
+    flex-shrink: 3 !important;
+  
+} */
+
+/* default value of oder is 0 so if you write 1 the element will be last one because 1 bigger of 0 which the rest of elements have 0 
+if you enter negative value like -1 the element will be first one  */
+.oneflex2 {
+    order:6 ;
+}
+.twoflex2 {
+    order:2 ;
+    /* flex-basis:100px; means initial width of child will be 100px */
+    /* flex-basis value can be considered as width or height depending on flex-direction columns or row */
+    /* flex-basis default value auto */
+    /* flex-basis will be useful in some cases like 
+    flex-direction is columns and you wrote width at element style will give you wierd shape but if you write flex-basis 
+    it will consider this width as height and vice versus */
+    /* difference between flex-basis and min-width that when you decrease the parent width with flex-basis will shrink the childs width 
+    but with min-width will not shrink childs width */
+    /* if you write max-width the flex-basis will respect that  */
+    /* width: 300px !important; */
+    /* flex-basis: 300px; */
+    /* max-width: 200px; */
+    /* then the width will be 200px */
+    /* shorthand (flex-grow - flex-shrink - flex-basis) */
+    flex: 1 1 150px;
+    /* here align-self will work and align-items not.. because align-self will override the align-items which written in .flex2 */
+    align-self: flex-end;
+    /* align-items: flex-end; */
+
+    
+
+    
+
+}
+.threeflex2 {
+    order:3 ;
+}
+.fourflex2 {
+    order:4 ;
+}
+.fiveflex2 {
+    order:5 ;
+}
+.sixflex2 {
+    order:1 ;
+}
+
+.inline-flex {
+    display: inline-block;
+}
+
+
+.imgfilter {
+    transition: 0.3s;
+    /* filter: grayscale(100%); */
+    /* filter: blur(4px); */
+    filter: invert(100%);
+}
+
+.imgfilter:hover {
+    /* filter: grayscale(0); */
+    /* filter: blur(0); */
+    filter: invert(0);
+}
+
+/* gradients = transition between one or more colors */
+/* why fixed below gardients ???  */
+.gradients {
+    /* linear-gradient( direction or angle , color stop1, color stop2, ... ) */
+    /* direction of color transition to right , to left , to top , to bottom */
+    /* angle like angle of circle 0 means to top / 90deg means to right / 180 to bottom / 270 to left   */
+    /* 20% or px 1st color will stop at 20% and the next color will fill the rest space  */
+    /* background-image: linear-gradient(90deg, red, green 20% , blue); */
+    width: 800px;
+    height: 200px;
+    background-color: #EEE;
+    margin: 20px auto;
+    position: relative;
+    padding: 10px;
+}
+
+.gradients:before {
+    content:"" ;
+    position: absolute;
+    top: -5px;
+    left:0;
+    width: 100%;
+    background-color: red;
+    height: 5px;
+    /* if you give the 2nd color percentage it will not merge (gradiant) with previous color  */
+    background-image: linear-gradient(to right,
+     #2980b9 20%,
+      #27ae60 20%,
+       #27ae60 40%,
+        #d35400 40%,
+          #d35400 60%,
+           #8e44ad 60%,
+             #8e44ad 80%,
+              #c0392b 80%,
+                #c0392b 100% );
+}
+
+.pointerevent {
+    
+    pointer-events: none;
+}
+
+.caretcolor {
+    caret-color: red;
+    
+}
+
+/* grid system dividing you webpage to major regions ( like columns and rows)  */
+/* grid-auto-rows and columns default value is auto that's why all child elements will stretch to fill all width and height but if you use place-items or place-content grid-auto will lose it's effect*/
+/* when you use place-items or place-content in Grid childs will take width and height enough only for their content
+and if you give only one child width the rest of childs will take this width ( in case of place content and if they don't have specific width) */
+/* in case of place-content when you give child width:100% or height:100% childs will not take it from parents but with place-items will do  */
+/* align-content in flex will work with line so you need 2 childs or more but in grid you can use it with one child only */
+
+.grid-parent {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #eee;
+    display: grid;
+    /* when you write 3 values that' means you want 3 columns and you can write px or percentage or you can write auto auto auto 
+    if you want three identical columns or you can write repeat(3, auto) */
+    /* grid-template-columns: 100px repeat(2, 50px) 25% auto; */
+    /* (( fraction is greedy and Auto is shy)) */
+    /* here will not 25% 25% 25% 25% because fr always take more than auto // you can also use fr with repeat(2, 1fr) */
+    /* in case of ( auto and fr )  auto will take minimum width (minimum width = is width to fit only the content 
+    so if you increase content ( text for exp. ) Auto will take more width to fit new content and the rest fr will take it */
+    /* grid-template-columns: auto auto 1fr 1fr; */
+    /* but here fraction will take the rest and four columns will be like each other because total width 800px */
+    /* grid-template-columns: 200px 200px 1fr 1fr; */
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* if you write only one value then first row will be 100px and the rest of rows will take the rest of height */
+    /* grid-template-rows: 100px; */
+    /* you can also use % , px , auto, fr , repeat() */
+    /* grid-template-rows: 200px 1fr auto ; */
+    /* grid-template-rows: repeat(3, 1fr); */
+    /* For example, grid-template: 50% 50% / 200px; will create a grid with two rows that are 50% each, and one column that is 200 pixels wide info from garden game */
+    /* row-gap: 20px; */
+    /* column-gap: 20px; */
+    /* shorthand of row-gab and column-gap */
+    gap: 10px 10px ;
+    /* grid-template-columns: repeat(6, 1fr); */
+    /* grid-template-rows: repeat(3, 1fr); */
+    /* justify-content will move elements if columns and row is auto because auto will take the remaining space 
+    but if there something want to take a space from him it will give him that space (auto is shy) 
+    but fraction will take all the remaining space and it will not give that space to anyone 
+    that's why justify-content not work with fraction */
+    /* justify-content: flex-end; */
+    /* look that shape of elements after justify-content: space-between; to do this is flexbox yoou should give each element width 
+    to give flexbox hint how many elements in each row then you should write flex-wrap */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly;
+    align-content: flex-start; */
+    /* here you wrote head 5 times that's means 5 columns  */
+    /* grid-template-areas: "head head head head head"; */
+    grid-template-areas: "head head nav nav nav" "cont cont cont cont cont";
+}
+
+/* => with grid-sytem you can not make L shape with same element ( for exp. you can not write this [ grid-template-areas: "e1 e1 e1" "e1 e2 e2 " "e1 e3 e3" ]
+   => with grid-system you can not put empty column inside same element ( for exp. you can not write grid-template-areas: "e1 . e1" 
+    but you can do it with two elements ( grid-template-areas: " e1 . e2" */
+
+/* align-items + justify-items = place-items // align-content + justify-content = place-content */
+
+.grid-parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.grid1 {
+    /* grid-column:; shorthand of grid-column start and grid-column end will take space of elements from 1 to 7 (7 not included) 
+    but be sure that you do not take space of elements more than columns if you take space of 7 elements and you have only 6 columns 
+    extra column will be added automatically and will damage the design but with span it will not damage the design and add extra column
+    for exp. if you want to 4th element to take space of 3 columns and and you have 5th and 6th columns in this row then it will not 
+    add extra column it will move to next line but if you write grid-column:4 / 7;  it will add extra column */
+    /* with grid-column-start and end you can use negative value to count from opposite site this info from garden game */
+    /* you can move backword grid-column-start: 5; grid-column-end: 2; this info from garden game */
+    /* you can write grid-column: 2 / span 3 here you give him start from position 2 and span 3 this info from garden game */
+    /* instead of 1 / 7 you can write span 6 but the advantge of span that you do not write start and end 
+    just write ant any element span and will take space of next elemets */
+    /* grid-column: 1 / 7; */
+    /* grid-column: span 6; */
+    /* if you are on 1st element and write to start from 2nd column will give you empty space before the element and this space called 
+    (offset)  */
+    /* grid-column: 2 / 7; */
+    /* grid-column: 1 /2 ; */
+    /* like grid-row but when you take space of 2 rows the extra element will not find any space to go so will create a new row and move to it  */
+    /* grid-row: 1 / 3; */
+    /* here this element take space of 5 columns because 
+    you write at .grid-paren  grid-template-areas: "head head head head head";  */
+    /* grid-area: head ; */
+    /* here this element take space of 2 columns because 
+    you write at .grid-paren  grid-template-areas: "head head nav nav nav";  */
+    grid-area: head ;
+
+
+}
+
+.grid2 {
+    /* here this element take space of 3 columns because 
+    you write at .grid-paren  grid-template-areas: "head head nav nav nav";  */
+    grid-area: nav;
+}
+
+.grid3 {
+    grid-area: cont;
+}
+/* .grid4 {
+    grid-column: 4 / 8; will damage the design and add extra column but grid-column: span; will not add extra column
+     and the element will go to next line
+    grid-column: 4 / 8;
+    grid-column: span 4;
+    grid-column: 4 / 5;
+} */
+
+/* 
+.grid9 {
+    background-color: green !important;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 5;
+    grid-column-end: 6;
+    shorthand of all this 
+    grid-area: 2 / 2 / 5 / 6;
+
+    [ grid-column-start:2; grid-column-end:5;] = [ grid-column: 2 / 5; ] = [ grid-column: 2 / span 3; ]  
+} */
+
+.grid-parent2 {
+    margin: 20px auto;
+    height: 500px;
+    background-color: #eee;
+    display: grid;
+    /* minmax stronger than fraction and fraction stronger than auto */
+    /* grid-template-columns: minmax(200px, 400px) repeat(2, 1fr); */
+    /* grid-template-columns:repeat(7, 1fr); */
+    grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+    /* difference where between 2 last lines in 1st line you told him to give you 7 columns so if you increase the size of webpage by browser it will increase the width of elements but with 2nd line when you increase the size of webpage by Browser it will take more columns in the row because you wrote autofill and not give him exactly how many columns do you need 
+    and we wrote minmax because when we increase the size of webpage without minmax() and the availabe width less than 200px it will be blank but with minmax() it will increase the width of elements till extra space reach 200px or more then will add more one column   */
+    /* difference between auto-fit and auto-fill 
+    auto-fill keep adding columns even if it's empty 
+    but auto-fit keep columns only if there is another child need column
+    for exp. you have parent and 3 childs and you write grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+    when you increase the size of webpage it will not add only 3 columns but the more size of webpage you increase the columns will be added
+    but when you write grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); 
+    it will only 3 columns and if you increase the size of webpage it will stretch childs to fit the new size */
+    /* you can use auto-fill and auto-fit instead of media quires to build responsive webpage */
+   
+}
+
+.grid-parent2 div {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 2px ;
+    /* height: 100px; */
+}
+
+.two-d {
+    margin: 200px auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255 0 0 / 39%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 5%;
+    margin-left: 5%;
+    /* transform :scaleX(2); */
+    /* transform:scaleY(2); */
+    /* difference between transform and increasing width of height that when you increase width it will only increase width 
+    but when you increase by transform it will increase every thing like stretching the webpage it will increase margin and content */
+    /* shorthand for both */
+    /* transform: scale(2, 2); */
+    /* or you can write one value and will be considered for both x and y  */
+    /* transform: scale(2); */
+    transition: .3s;
+    /* negative value will flipp the element  */
+    /* transform: scaleX(-1); */
+    /* transform: scaleY(-1); */
+    /* transform: scaleX(-1); */
+    /* deg = degree // rad= radians // grad = gradians   */
+    /* 360deg = 6.28rad =400grad = 1 turn */
+    transform: rotate(90deg);
+    
+}
+
+/* differen between [ grid-template-columns or rows ] and [ grid-auto-columns or rows ] 
+grid-template define no. and size of columns or rows 
+grid-auto define only size of columns or rows
+for exp. 9 divs inside container with display:grid; and you write [grid-template-rows: 100px 100px;] and [grid-auto-rows: 30px;]
+first 2 rows will be 100px the the rest of rows will be 30px  */
+
+
+
+/* 
+.two-d:hover {
+    transform: scaleX(1);
+} */
+
+.img-2d {
+    overflow: hidden;
+    width: 300px;
+    height: 168px;
+    
+   
+}
+
+.img-2d img {
+    /* this is the time of transition when you move the cursor away */
+    transition: 3s;
+    
+}
+
+/* to be sure the image scale and rotate inside it's container you should write at container overflow: hidden 
+and the rotation looks good inside the container the width and the height of img should be the same like container */
+.img-2d img:hover {
+    transition: 0.5s;
+    /*  the difference between scaling and width that scaling stretch everything box , content , padding and margin everything
+     but the browser will not show you the new values of margin , padding or width / width only increase width */
+    /* negative value at scale will flip the element */
+    transform: scale(1.5) rotate(20deg);
+    /* you can't write 2 transfrom with rotate and scale but you can write them at one transfrom at same line as shorthand  */
+    /* transform: rotate(20deg); */
+    opacity: 0.6;
+}
+
+.translate {
+    margin: 200px auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255 0 0 / 39%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 5%;
+    margin-left: 5%;
+    transition: 0.5s;
+    /* ((translate)) */
+    /* 1st value is X-axis and 2nd value is Y-axis and can be positive or negative values ( will move to opposite direction 
+    and if you did not write 2nd value it will be default value 0 // you can also use % if you write 50% 
+    it will move 50% of it's width if X-axis or of it's height if Y-axis*/
+    /* translate use same concept of left and top in relative position */
+    /* translate is better than position because translate give you better performance */
+    /* translate is better than position 
+    for exp. you want to center child inside container with position you will write top:50% left:50% 
+    margin-top:-(half of height) margin-left:-(half of width) but if you change the width or height of child 
+    you should change the margins value but with transform:translate(-50%, -50%) you don not have to change anything */
+    /* transform: translate(100px , 100px); */
+    /* you can use also deg , rad , grad , turn , - or + values  */
+    /* 90deg will disapear at SkewY or X and rotateY or X */
+    /* transform: skewY(20deg); */
+    /* transform: skewX(20deg); */
+    /* if you want to use transform:skew on title box for exp. if you use it directly on box it will bend the background and text itself 
+    but you can use psudo-element ( background as before psudo ) and skew on it so will bend only the background */
+    /* if you did not write 2nd value it will be default value 0 */
+    /* transform: skew(20deg); */
+    /* matrix (scaleX(), scaleY(), skewX(), skewY(), scaleY(), translateX(), translateY()) */
+    /* you can also write all this at same line in transform but you should write name of each function 
+    but with matrix you will write only the values */
+    /* at skew you should know no. which equilvent to degree to know this search for tan of angle  */
+    /* sequnce of matrix => scaleX skewY skewX scaleY translateX translateY */
+    /* sequnce of transform : => translateX translateY scaleX skewY skewX scaleY */
+    /* transform: matrix(1.2, 0.2679 , 0, 1.2, 20, 20);  2nd value is tan of angle*/
+    transform: translateX(20px) translateY(20px) scaleX(1.2) skewY(15deg) skewX(0deg) scaleY(1.2) ;
+    /* to give you same output you should write them in this sequence for exp. if you scale before translate the output will be different */
+
+}
+
+.skew {
+    position: relative;
+    color: white;
+    margin: 20px auto;
+    width: fit-content;
+    padding: 20px;
+    
+}
+.skew::before {
+    content: "";
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* if you write transform: skewY(20deg); at .skew not at psudo-element will bend the background and the text also 
+    but here will bend the background only becasue it's sperated from text this is psudo-element and .skew is h2  */
+    transform: skewY(20deg);
+}
+
+/* 
+2D transform => tranform-origin(X, Y)
+3D transform => transform-origin(X, Y, Z)
+Default value of transform-origin: 50% 50% 0 
+X-Axis accept values : css Units (px, em, rem) , % , keyword ( left= 0% / center= 50% / right=100%)
+Y-Axis accept values : css Units (px, em, rem) , % , keyword ( top= 0% / center= 50% / bottom=100%) */
+
+
+
+.main-origin {
+    position: relative;
+    height: 400px;
+   
+    
+}
+
+
+
+.origin {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* to center element you have to write these three lines why ?
+    left:50% means the element's left edge is shifted by 50% 
+    top:50% means the element's top edge is shifted by 50%
+    and we use translate (-50%, -50%) because where center the edge of element 
+    but we need to center the element istself */
+    width: 300PX;
+    height: 300PX;
+    background-color: #EEE;
+   
+   
+
+}
+
+.origin .xaxis:before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    bottom: -20px;
+    position: absolute;
+    
+}
+.origin .xaxis:after {
+    content: "X-Axis";
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #fff;
+    width: 60px;
+    text-align: center;
+    font-weight: bold;  
+}
+
+.origin .yaxis:before {
+    content:"" ;
+    width: 2px;
+    height: 100%;
+    background-color:black;
+    left: -20px;
+    position: absolute;
+}
+.origin .yaxis:after {
+    content: "Y-Axis";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translate(-50%);
+    background-color: #fff;
+    height: 60px;
+    text-align: center;
+    font-weight: bold;
+    writing-mode: vertical-lr;
+}
+.transform2 {
+    width: 90%;
+    height: 90%;
+    background-color: rgb(255 0 0 / 39%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 5%; 
+    /* meaning of transform origin is that you determine which point will the element rotate around */
+    /* transform-origin: 50% 50%;  */
+    /* same like
+    transform-origin: center center;  */
+    /*  using left and top concept like position of sticky
+        right = 100% of left
+        left = 0 
+        top = 0 
+        bottom = 100%  of top */
+    /* transform-origin: right top; */
+    /* transform-origin: 100% 0 ; */
+    /* transform: rotate(40deg); */
+
+
+}
+
+.originspan {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.main-origin1 {
+    position: relative;
+    height: 800px;
+    /* width: 100%; */
+    
+}
+
+
+.origin1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300PX;
+    height: 300PX;
+    background-color: #EEE;
+    /* distance between me and the element in 3D */
+    perspective:300px ;
+    /* perspective-origin: 100% 100%; */
+    /* or perspective-origin: right bottom; */
+
+}
+
+
+.origin1 .xaxis1:before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    bottom: -20px;
+    position: absolute;
+    
+}
+.origin1 .xaxis1:after {
+    content: "X-Axis";
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #fff;
+    width: 60px;
+    text-align: center;
+    font-weight: bold;  
+}
+
+.origin1 .yaxis1:before {
+    content:"" ;
+    width: 2px;
+    height: 100%;
+    background-color:black;
+    left: -20px;
+    position: absolute;
+}
+.origin1 .yaxis1:after {
+    content: "Y-Axis";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translate(-50%);
+    background-color: #fff;
+    height: 60px;
+    text-align: center;
+    font-weight: bold;
+    writing-mode: vertical-lr;
+}
+.origin1 .zaxis1:before {
+    content:"" ;
+    width: 2px;
+    height: 100%;
+    background-color:black;
+    left: -21px;
+    top: 17px;
+    position: absolute;
+    transform-origin: 100% 100% ;
+    transform: rotate(225deg);
+}
+.origin1 .zaxis1:after {
+    content: "Z-Axis";
+    position: absolute;
+    left: -170px;
+    top: 119%;
+    transform: translate(-50%);
+    background-color: #fff;
+    height: 60px;
+    text-align: center;
+    font-weight: bold;
+    writing-mode: vertical-lr;
+    transform-origin: 100% 100% ;
+    transform: rotate(225deg);
+}
+
+
+.transform3 {
+    width: 90%;
+    height: 90%;
+    background-color: rgb(255 0 0 / 39%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 5%; 
+    /* rotate3d(X, Y, Z, 45deg) and 0 means off / 1 means on and accept value of px % also */
+    /* transform: rotate3d(1, 1, 1, 45deg); */
+
+
+    /* to make translateZ work you should add prespective at parent */
+    /* transform: translatez(150px); */
+    
+}
+
+
+/* .originspan1 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+
+
+.backface {
+    margin: 40px auto;
+    width: 200px;
+    perspective: 300px;
+    /* to make it flip with 3d effect   */
+}
+
+.backfacebox {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    /* this value enables the child to preserve their 3D position  */
+    /* i think preserve 3D keep flipped element below non flipped element */
+    transition: transform 1s;
+    /* transform-origin: right center; */
+   
+   
+    
+}
+
+.backfacebox:hover{
+    /* you have to write two line to successfully flip entire box with 2 elements (transform-style: preserve-3d; in box itself) and (transform: rotateY(180deg);) at one element   */
+    transform:rotateY(-180deg)
+    /* transform:translate = (-100%) rotateY(-180deg) */
+}
+
+/* .backfacebox:hover .front {
+    transform: rotateY(180deg);
+} */
+
+.backfacebox .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+    
+    
+    
+    
+}
+
+.backfacebox .front {
+    background-color: red;
+    backface-visibility: hidden;
+     
+    
+}
+.backfacebox .back {
+    background-color: green;
+    transform: rotateY(180deg);  
+    backface-visibility: hidden;
+    /* when you flip element you will not see it's back ( when it flipped) */
+    
+}
+
+.anim-parent {
+    position: relative;
+    height: 300px;
+}
+
+.animation {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform: translate(-50%, -50%);
+    animation-name: change-color;
+    /* you should write duration because it's default value 0 / if you did not write duration animation will not work */
+    animation-duration: 6s;
+}
+
+@keyframes change-color {
+    /* from {
+        background-color: red;
+    }
+    to {
+        background-color: blue;
+    } */
+    /* you can use instead of (from to) to ( 0% 100%) */
+    0% {
+        background-color: red;
+    }
+    50% {
+        background-color: blue;
+    }
+    100% {
+        background-color: red;
+    }
+
+    /* animation-duration will be divided to each step by % if for example 0% 90% 100% and duration is 10s 
+    then 1st step from 0% to 90% will take 9s and 2nd step from 90% to 100% will take only 1 sec */
+}
+
+.spinn-parent {
+    position: relative;
+    height: 300px;
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    animation-name: spin;
+    animation-duration: 3s;
+    border-radius: 50%;
+    border: 5px solid #e91E63;
+    transform: rotate(1turn);
+    border-left-color:transparent ;
+    animation-iteration-count: infinite;
+    /* like True Loop */
+    animation-timing-function: linear;
+    /* ease will stop little bit every round but linear will continue without any stops */
+    /* animation-direction: normal; is the default */
+    /* animation-direction: reverse; */
+    /* alternate means turn and turn back see the webpage to understand */
+    animation-direction: alternate;
+    /* animation-direction: alternate-reverse; */
+
+    
+}
+
+@keyframes spin {
+   
+    0% {
+        transform: rotate(0deg);
+    }
+ 
+    100% {
+        transform: rotate(360deg);
+    }
+
+   
+}
+.color-parent {
+    position: relative;
+    height: 300px;
+}
+
+.coloring {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    animation-name: coloring;
+    animation-duration: 3s;
+    border-radius: 50%;
+    /* animation-iteration-count: infinite; */
+    /* animation-timing-function: linear; */
+    /* animation-direction: normal; */
+    /* animation-delay: 2s ; */
+    /* negative value means if duration is 5sec so it will skip 2 sec of duration */
+    /* -o-animation-delay: -2s;  */
+    /* animation-fill-mode: forwards; */
+    /* forwards means it will take the style of last keyframes so here after animation finish it will take black color  */
+    /* animation-fill-mode: backwards; */
+    /* forwards means it will take the style of first keyframes before the animation start so here before animation start it will take red color  */
+    /* animation-fill-mode: both; */
+    /* it will take style of 1st or last keyframes according to animation direction */
+    /* animation-direction: reverse; */
+    /* animation-play-state: running; is thw default value */
+    /* animation-play-state: running; */
+    /* ((shorthand for Animation)) */
+    /* name of animation duration delay animation-iteration-count animation-direction */
+    animation: coloring 3s linear 2s infinite reverse;
+    
+}
+
+.coloring:hover {
+    animation-play-state: paused;
+
+}
+@keyframes coloring {
+   
+    0% {
+        background-color: red;
+    }
+    50% {
+        background-color: blue;
+    }
+ 
+    100% {
+        background-color: black;
+    }
+
+   
+}
+
+
+
+.load {
+    display: flex;
+    justify-content: center;
+    /* position: relative; */
+    background-color: #eee;
+    width: 400px;
+    height: 400px;
+    
+}
+
+.load div { 
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    border-radius: 50%;
+    /* margin: 0 5px; */
+    animation-name: up-and-down;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* position: absolute; */
+    /* top:50%;
+    transform: translate(-50%, -50%); */
+    margin-left: 2px;
+    margin-top: 200px;
+   
+
+}
+
+.two-load {
+    animation-delay: 0.3s;
+}
+.three-load {
+    animation-delay: 0.6s;
+}
+/* i used to test only absolute position */
+
+/* .one-load {
+    right: 50%;
+    
+}
+.two-load {
+    right: calc(50% - 22px);
+}
+.three-load {
+    right: calc(50% - 44px);
+} */
+
+@keyframes up-and-down {
+   
+    to {
+        opacity: 0.1;
+        transform: translateY(-20px);
+    }
+/* if you will write a default value in from you can remove from and write only to  */
+}
+
+/* CSS Selectors
+* to target all elements
+you can target tags but will target all elements that have same tag 
+you can target child element inside parent ( div p )it will target p even it's grandson not only child
+you can target element by .class-name
+you can target element by #id-name (ID can be applied for only one element but class can be added to more than one element)
+you can target child inside parent by .class-parent .class-child
+you can target element have 2 classes like this ( class="class1 class2) by .class1.class2
+you can grouping by .class-name div, .class-name p 
+you can target only one element(p) if there are many elements have same class by p.class-name
+
+the difference between targeting DIRECT CHILD and child 
+.class-name > child 
+it will only target the child not grandson
+.class-name child 
+it will target child and grandsons also
+
+( div + p ) means will target only the first p which is directly after div 
+( p ~ span ) means will targent all span (not only the first span) which is directly after p
+.parent > * + * will select all childs except first one (info from youtube)
+
+you can target element by it's attribute name by [title]
+you can target element by it's attribute name and tag div[ title]
+you can target element by it's attribute with value name by [ title=value]
+you can target element by it's attribute name with value and tag div[ title=value]
+you can target element by a word inside value of it's attribute by [ title ~= word ]
+you can target element by string inside value of it's attribute by [ title *= word ] here word can be part of the value of attribute
+you can target element by string at start of value of it's attribute by [ title ^= word ] 
+
+:first-child like (div:first-child) means target fisrt div element inside any parent 
+:last-child like (div:last-child) means target last div element inside any parent
+:first-of-type (div:first-of-type) means target first div element ( inside a parent or not )even if it's 2nd or 3rd element
+:last-of-type (div:first-of-type) means target last div element 
+:only-child (div:only-child) means target div element but should be alone inside it's parent
+:only-of-type (div:only-of-type) means target div element if he only the div element inside it's parent he can have brothers but should different tags
+div:not(selector) will target all div elements except the one with this selector like div:not(:first-child)
+div:nth:child(n) will target the 2nd div child if you write div:nth:child(2)
+div:nth:child(n) will target the even div child if you write div:nth:child(even) or odd
+div:nth:last-child(n) will count from last 
+div:nth:of-type(n)  
+div:nth:last-of-type(n)  div:nth:last-of-type(1) means last one / div:nth:last-of-type(2) will count from last
+
+:nth-child(odd) [ 1, 3, 5 , .... ] = nth:nth-child(2n + 1) [ 2x0 + 1 = 1 / 2x1 + 1 = 3 / 2x2 + 1 = 5 / .... ] 
+:nth-child(3n) [ 3x1 = 3 / 3x2 = 6 / 3x3 = 9 / ...... ] will add 3 every time
+:nth-child(n+7) [0 + 7 = 7 / 1 + 7 = 8 / 2 + 7 = 9 / .... ]  will select the 7th element then all remaining elements after 7th element 
+:nth-child(-n + 3) [ -0 + 3 = 3 / -1 + 3 = 2 / -2 + 3 = 1 ] will select first three elements
+:nth-child(n+8):nth-child(-n+15) will select range from 8th to 15th  
+when (+) start count from (0) but when (x) start count from (1)          
+
+input[type="checkbox"]:checked + label means will target the label only when checked in input with attribute type and value checkbox
+div:empty means will target div element only if it's empty
+input:disabled will target disabled word ( HTML CODE => input type="text" disabled value="disabled" )
+input:requird + span will traget span after input ( HTML CODE => input type="text" placeholder="please input here" required)
+input:focus{ boder: 2px solid red; ) when you focus on input will add border with red color
+div::selection { background-color: black; color: white; ) when you select this div the selection color will change
+input::placeholder { color: red; } means the placeholder color will change to red
+
+*/
+
+/* input::placeholder {
+    color:crimson
+} */
+
+/* input:focus{ 
+    border: 5px solid red; 
+} */
+
+/* div::selection {
+    background-color: black;
+    color: white;
+} */
+
+.queries {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+.queries > div {
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    width: 290px;
+    
+}
+
+@media print {
+    .queries > div {
+        font-size: 100px;
+    }
+
+    .queries > div:first-child {
+        display: none;
+    }
+}
+
+/* that's means that it will work only in range 0 to 1000px / you can use also min-width*/
+
+@media (max-width: 1000px) {
+     
+     .queries > div {
+         background-color: blue;
+     }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+     
+     .queries > div {
+         background-color: green;
+     }
+
+}
+
+/* you can also create a new CSS file for exp. print.css and write this line in HTML file
+<link rel="stylesheet" href="css/print.css" media="print"> you can also use any condition like media="(min-width: 1000px) and (max-width: 1400px)" 
+and at CSS file you do not need now to use @media  */
+
+/* or you can use Style tag in HTML file
+<style media="print">
+.queries > div {
+    background-color: blue;
+}
+</style> */
+
+
+/* Mobile */
+@media (max-width: 767px) {
+    
+}
+/* Small Screens */
+@media (min-width: 768px) {
+
+}
+/* if the style is same we do not write max-width at previous media because once width reach 992px next media will override previous media */
+/* but if the style different then the previous style will continue to infinity width so you need now to write max-width */
+
+/* Medium Screens */
+@media (min-width: 992px) {
+
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+
+}
+
+/* Custom */
+/* here you can write style for all media before  */
+@media (max-width: 1199px) {
+
+}
+
+.framework {
+    position: relative;
+    background-color: #eee;
+    margin: 20px auto;
+    width: 900px;
+    height: 200px;
+}
+
+.product-parent {
+    position: relative;
+    margin-top: 100px;
+    height: 200px;
+}
+.framework-product {
+
+    background-color: red;
+    color: white;
+    
+   
+}
+
+.framework-child {
+    background-color: green;
+    color: white;
+   
+}
+
+/* here we create framework for us and you will write this class at element in HTML file */
+.center-position {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+   
+}
+
+/* to center text inside Circle */
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.global-value {
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #eee;
+    padding: 20px ;
+    margin: 5px;
+    border: 2px solid black;
+    /* initial means restore all CSS properites to their initial state for exp. all elements is inline 
+    but user agent stylesheet give div block level and span inline level // another exp. initial color of elements is black
+    so when you write color:initial; will give you black color ( maybe the initial color differ from one browser to another */
+    /* display: initial; */
+    
+    
+    
+}
+
+.global-button {
+    /* unset used as inherit if this properity can be inherited if not it will act as initial */
+    /* color:unset; now means it will search if he can inherit from parent or not 
+    if he can inherit so he will take the color of it's parent 
+    if he can not inherit so the color will return to it's initial color */
+    color: unset;
+    /* we can not use unset with border because border is not a inherit property by default */
+    border: unset;
+    /* all:unset; means it will inherit all inherit properites (like color not border ) 
+    and the non-inherit properites will return to it's initial state */
+    all:unset;
+    /* difference between revert and initial that initial restore all CSS properites to their initial state
+    but revert restore all CSS properites to user agent stylesheet for exp if you write 
+    * { box-sizing: border-box;
+        margin:0; 
+    }
+    so all elements will be 0 margin but with margin: revert it will restore 8px which is given 
+    by user agent stylesheet*/
+    margin: revert;
+}
+
+
+/* to center text inside div */
+/* you have 6 ways ti do it 
+1. using vertical-align in table cell and parent display table
+2.using position absolute inside parent div and left:50%; top:50%; transform:translate (-50%, -50%)
+3.using flex without span inside div directly using justify-content:center; align-items:center;
+4.using padding only with display:inline-block because block will take full width 
+5.using display:grid; and place-items:center; 
+6.using text-align:center; and line-height:px; ( same height of parent) but line-height is not accurate */
+
+/* to center div inside div
+1.using flex justify-content:center; align-items:center; 
+2.using grid place-items:center; 
+3.using display:table-cell; vertical-align:middle; text-align:center; and child display:inline-block; 
+4.parent position:relatvie; child position:absolute; left:0; right:0; top:0; bottom:0; margin:auto; */
+
+.center-text {
+    background-color: green;
+    color: white;
+    height: 100px;
+    width: 100px;
+    display: table;
+    text-align: center;
+}
+
+.cent { 
+    vertical-align: middle;
+    display: table-cell;
+}
+
+/* to add icons you can add it at HTML file with dec code like this &#129409; or HEX code like this &#x1F981;  
+or you can add it by using psudo-element and content:"\00AE*/
+
+/* to maintain aspect ratio of img
+width:100% 
+height:auto; 
+*/
+
+/* 
+height:100% means 100% of it's container
+height:auto; means height of it's childs */

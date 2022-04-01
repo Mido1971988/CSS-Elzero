@@ -1,0 +1,883 @@
+/* .origin {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300PX;
+    height: 300PX;
+    background-color: #EEE;
+    
+   
+
+}
+
+.origin .xaxis:before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    bottom: -20px;
+    position: absolute;
+    
+}
+.origin .xaxis:after {
+    content: "X-Axis";
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #fff;
+    width: 60px;
+    text-align: center;
+    font-weight: bold;  
+}
+
+.origin .yaxis:before {
+    content:"" ;
+    width: 2px;
+    height: 100%;
+    background-color:black;
+    left: -20px;
+    position: absolute;
+}
+.origin .yaxis:after {
+    content: "Y-Axis";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translate(-50%);
+    background-color: #fff;
+    height: 60px;
+    text-align: center;
+    font-weight: bold;
+    writing-mode: vertical-lr;
+}
+.transform2 {
+    width: 90%;
+    height: 90%;
+    background-color: rgb(255 0 0 / 39%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 5%; 
+    transition: 0.5s;
+} */
+
+/* 
+.float {
+    background-color:red;
+    padding: 10px;
+    width: 300px;
+    
+    overflow: hidden;
+
+}
+
+.son {
+    background-color: #eee;
+    float: left;
+    width: calc(100% - 15px);
+    text-align: center;
+    
+    
+} */
+
+/* position absolute will move related to it's parent ( position : relative )
+if you write right:0; top:0; so will move to corner top right because this means 
+he will move till the right side has zero pixel on right and top side has zero pixel from the top
+and if you write right:20px; will push the element to left side and vice verse */
+
+/* position fixed like absolute but related to layout not to it's parent */
+
+/* position relative will move related to it self not to it's parent
+that's why when you write right:0; it will not move to right side like absolute because it 
+move related to it self and right:0; means right side has zero pixel to it's related container 
+but it related to it self so always it's zero pixel from right side */
+
+/* position sticky will move related to the layout but also can't go outside it's parent
+that's why right:; and bottom:; not working because you cant push the sticky element
+ outside it's parent if you want to move it use left and top this at english version of website 
+ at arabic version directions will be inverted 
+ to move it you can use px or % but be ware that px or % will calculated from the layout not it's parent*/
+
+ .parent::before {
+    content: "";
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: -1;
+   
+} 
+
+
+.parent {
+    background-color: #eee;
+    width: 500px;
+    height: 3000px;
+    position: relative;
+    margin: 20px auto;
+    
+}
+
+.one {
+    background-color: Blue;
+    color: white;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left:100%; 
+    top: 0;
+    
+    
+    
+   
+
+}
+.two {
+    background-color: green;
+    color: white;
+    width: 100px;
+    height: 100px;
+    position: static;
+    left:0;
+    top: 0;
+    /* bottom: 0;
+    right: 0; */
+    
+    
+
+}
+.three {
+    background-color: red;
+    color: white;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    left:70%;
+    top:0;
+    
+   
+
+}
+.four {
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 100px;
+    position: sticky;
+    left:30%;
+    top: 0;
+   
+    
+
+}
+
+
+
+
+.flex {
+  
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* justify-content: flex-end; */
+    align-items: flex-end;
+   
+}
+
+
+.flex div {
+    background-color: red;
+    color: white;
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+
+.float {
+    overflow: hidden;
+    background-color: #eee;
+    width: calc(96%/5);
+    padding: 20px;
+    margin: 20px auto;
+    
+}
+
+
+.float div {
+    background-color: red;
+    color: white;
+    float: left;
+    width: calc(94% / 3);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+/* .onefloat {
+    height: 80px;
+}
+.twofloat {
+    height: 120px;
+}  */
+/* .threefloat {
+    margin-left: 1%;
+    margin-right: 1%;
+} */
+
+/* .oneflex {
+    height: 80px;
+}
+.twoflex {
+    height: 120px;
+} */
+/* .threeflex {
+    margin-left: 1%;
+    margin-right: 1%;
+} */
+
+.flex2 {
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    /* if you want to bring next element at same line be sure to write flex-inline and next element inline-block */
+    display: inline-flex;
+    /* flex-direction:column; */
+    height: 300px;
+    align-items: flex-start;
+    
+
+
+}
+
+.flex2 div {
+    background-color: red;
+    color: white;
+    width: 80px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box; 
+    margin-right: 5px;
+    /* default value of flex-grow is 0 which means no grow but 1 means all items will grow like each other to fill the remaining space 
+    and if you want to grow one element more than others you can add flex-grow to this item for example flex-grow: 3 means will grow 
+    by ration 3:1 but if there is availabe space ( if you do not have extra space all items will grow 1:1 because we wrote  flex-grow: 1;
+    in .flex2 div but if there is extra space by reducing width of each element the element with flex-grow:3 will grow till reach 
+    ratio 3:1 */
+    /* if you still grow the elements to infinity all elements will grow like each others and will be same size */
+    flex-shrink: 1;
+    
+
+}
+
+.grid-parent {
+    margin: 20px auto;
+    width: 900px;
+    height: 100vh;
+    background-color: #eee;
+    display: grid;
+    /* grid-auto-columns:200px ; */
+    /* grid-template-columns: auto auto;
+    grid-template-rows: 100px ; */
+    gap: 10px;
+    grid-auto-rows: 50px;
+    grid-template-rows: 100px 100px;
+}
+
+.grid-parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+        /* margin-right: 10px;
+        margin-bottom: 10px; */
+}
+
+.grid-page {
+    display: grid;
+    /* vh = viewport height or vw= viewport width they allow to size elements and font sizes as percenatge 
+    of the total width or height of the user's screen (the viewport) */
+    height: 100vh;
+    background-color: #eee;
+    /* grid-template-columns: repeat(10, 1fr); */
+}
+
+.division { 
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    color: white;
+    text-align: center;
+    /* padding: 20px; */
+    /* display: table-cell;
+    vertical-align: middle; */
+}
+
+.center {
+    background-color: green;
+    color: white;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
+/* 
+.cent { 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+} */
+
+.scaling {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: white;
+    /* transform: scaleX(2); */
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    position: sticky;
+    left:120% ;
+}
+
+
+.psudo::before {
+    content: "";
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    /* z-index: -1; */
+    /* transform: skewX(80deg); */
+   
+} 
+
+.psudo {
+     position: relative;
+     color: green;
+     text-align: center;
+     width:fit-content;
+     background-color: hotpink;
+
+
+}
+
+.backface {
+    margin: 40px auto;
+    width: 200px;
+    perspective: 400px;
+    /* to make it flip with 3d effect   */
+}
+
+.backfacebox {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    /* transform-style: preserve-3d; */
+    /* this value enables the child to preserve their 3D position  */
+    transition: transform 1s;
+    /* transform-origin: right center; */
+    
+}
+
+.backfacebox:hover {
+    /* you have to write two line to successfully flip entir box with 2 elements (transform-style: preserve-3d; in box itself) and (transform: rotateY(180deg);) at one element   */
+    transform:rotateY(-180deg)
+    /* transform:translate = (-100%) rotateY(-180deg) */
+}
+
+.backfacebox .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+    
+    
+    
+    
+}
+
+.backfacebox .front {
+    background-color: red;
+    /* backface-visibility: hidden; */
+    margin-left: 100px;
+     
+    
+}
+.backfacebox .back {
+    background-color: green;
+    transform: rotateY(180deg);  
+    backface-visibility: hidden;
+    /* margin-left: 100px; */
+    /* when you flip element you will not see it's back ( when it flipped) */
+}
+
+.background-position {
+    width: 400px;
+    height: 400px;
+    background-color: #eee;
+    background-image: url(../../HTML-Zero/imgs/css-assignment-5-8.png);
+    color: lawngreen;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 100% 100%;
+}
+
+.son { 
+    color: red;
+}
+
+.parentson .son {
+    color: blue;
+}
+
+
+
+.outline {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: red;
+    /* outline:10px solid yellow; */
+    margin: 50px auto;
+    
+}
+.outline2 {
+    width: 200px;
+    height: 200px;
+    border: 5px solid red;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+   
+}
+
+.outline-parent {
+    position: relative;
+
+}
+
+
+/* 
+.centext-parent {
+    position: relative;
+    min-height: 500px;
+    
+} */
+
+.assi-48-parent {
+    background-color: #eee;
+    width: 1000px;
+    height: 500px;
+    margin: 20px auto;
+    display: flex;
+    /* flex-wrap:wrap; */
+    /* align-content: space-between; */
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+    justify-items: flex-start;
+    
+   
+    
+}
+
+.assi-48-parent div {
+    background-color: #2e6c66 ;
+    color: white;
+    /* margin:10px;  */
+    padding: 20px;
+    width: calc((100% - 60px) / 6);
+    text-align: center; 
+    height: 30px;
+    /* display: flex; */
+    
+    
+    
+    
+}
+
+.one48 {
+    /* align-self: center; */
+    /* margin-top:auto ; */
+    justify-self: center;
+    
+}
+
+/* .one48 {
+    order: 6;
+    margin-top: 190px !important;
+    
+}
+.two48 {
+    order: 5;
+    
+    
+}
+.three48 {
+    order: 2;
+}
+.four48 {
+    order: 3;
+   
+}
+.five48 {
+    order: 4;
+   
+    
+}
+.six48 {
+    order: 1;
+
+} */
+
+
+.flex-parent {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    height: 500px;
+    background-color: #eee;
+    align-items: center;
+    
+}
+
+.flex-child {
+    /* margin-left:auto;
+    margin-right: auto; */
+    /* width: 100px; */
+    height: 50px;
+    background-color: blue;
+    color: white;
+    flex-grow: 1;
+    /* flex: 1; */
+}
+
+.psudo-before {
+    background-color: #eee;
+    width: 500px;
+    height: 500px;
+    margin: 20px auto;
+    display: grid;
+}
+
+.psudo-before div {
+    background-color: gray;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.psudo-before div::before {
+    content: "1";
+    color: #eee;
+    
+}
+
+.grid {
+    margin: 20px auto;
+    display: grid;
+    width: 300px;
+    height: 300px;
+    background-color: lightgreen;
+    position: relative;
+    /* align-content: center;
+    place-content: center;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center; */
+}
+
+.grid-child1,
+.grid-child2,
+.grid-child3,
+.grid-child4 {
+    background-color: crimson;
+
+}
+
+.grid-child1 {
+    order: 3;
+}
+
+.ass-5 div:nth-child(2) p + div {
+    color: red;
+}
+
+.ass-6 div :nth-last-of-type(2):not(.no-need div) {
+    color: red;
+}
+
+.ass-7  div:not( p ~ div , .ass-7 > div ) {
+    color: red;
+}
+
+.ass-99 div:not( p ~ div) {
+    color: red;
+}
+
+.grid99 {
+    width: 200px;
+    height: 100px;
+    background-color: #eee;
+    word-wrap: break-word;
+    display: grid;
+}
+
+.grid999 {
+    display: grid;
+    padding: 20px;
+    grid-auto-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "o9 o9 o9" "tw9 . f9" "t9 t9 t9";
+    gap: 10px;
+    background-color: white;
+}
+
+.grid999 div {
+    padding: 20px 0;
+}
+
+.one999 {
+    /* background-color: red;
+    grid-area: 1 / 1 / 2 / 4; */
+    grid-area: o9;
+    background-color: red;
+}
+.two999 {
+    /* background-color: blue;
+    grid-area: 2 / 1 / 3 / 2; */
+    grid-area: tw9;
+    background-color: blue;
+}
+.three999 {
+    /* background-color: green;
+    grid-area: 3 / 1 / 4 / 4; */
+    grid-area: t9;
+    background-color: green;
+}
+.four999 {
+    /* grid-area: 2 / 3 / 3 / 4;
+    background-color: yellow; */
+    grid-area: f9;
+    background-color: yellow;
+}
+
+.gridtest {
+    width: 500px;
+    height: 500px;
+    display:grid;
+    place-content: center;
+    
+}
+
+
+
+.gridtest div:nth-child(1) {
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+    
+}
+.gridtest div:nth-child(2) {
+    background-color: green;
+    width: 100%;
+    height: 100%;
+}
+
+.button {
+    display: block;
+    border: none;
+    background-color: white;
+    overflow: hidden;
+    height: 20px;
+    width: 150px;
+}
+
+.button span {
+    display: block;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+}
+
+.button:hover {
+    overflow: visible;
+}
+
+.hello {
+    width: 180px;
+    margin: 50px auto;
+    background-color: green;
+    color: white;
+    height: 30px;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+.hello span {
+    display: block;
+    background-color: red;
+    color: white;
+    width: 180px;
+    margin-top: 30px;
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+.posparent {
+    width: 1200px;
+    height: 400px;
+    border: 1px solid transparent;
+}
+
+.pos-pos {
+    width: 400px;
+    height: 400px;
+    background-color: #eee;
+    margin: 20px auto;
+    position: absolute;
+}
+
+.pos-pos div {
+    width:50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+}
+
+.stacking {
+    width: 400px;
+    height:400px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: static; */
+    
+}
+
+
+
+.stacking::before {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: black;
+    /* position: absolute; */
+    left: -20px;
+    top: 0;
+    z-index: 0;
+    display: inline-block;
+}
+
+.flextest {
+    width: 600px;
+    height: 600px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+}
+
+.flextest > div {
+width: calc( 100% / 3);
+
+}
+
+.flextest > div:nth-child(1) {
+    background-color: red;
+    height: 200px;
+}
+.flextest > div:nth-child(2) {
+    background-color: blue;
+    height: 100px;
+}
+.flextest > div:nth-child(3) {
+    background-color: green;
+}
+
+.gridtest99 {
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "g1 g2" "g3 g4";
+    
+}
+
+.gridtest1 {
+    grid-area: g1;
+    background-color:red !important;
+    width: 110%;
+    z-index: 2;
+}
+.gridtest2 {
+    grid-area: g2;
+    background-color: yellow !important;
+    height: 110%;
+    z-index: 1;
+}
+.gridtest3 {
+    grid-area: g3;
+    background-color: blue;
+}
+.gridtest4 {
+    grid-area: g4;
+    background-color: green;
+}
+
+.grad44 {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(grey,grey) 49.75% 49.75% / 49.75% 49.75% ,
+	linear-gradient(#f65314,#f65314) 0% 0% / 49.75% 49.75%,
+	linear-gradient(#00a1f1,#00a1f1) 0% 100% / 49.75% 49.75%,
+	linear-gradient(#ffbb00,#ffbb00) 100% 100% / 49.75% 49.75%,
+	linear-gradient(#7cbb00,#7cbb00) 100% 0% / 49.75% 49.75%
+	;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.text-align {
+    width: 500px;
+    height: 500px;
+    background-color: #eee;
+    text-align: center;
+}
+
+.text-align > div {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}

@@ -1,0 +1,203 @@
+/* :root {
+    font-size: 25px;
+} */
+
+.counter-parent {
+    counter-reset: list-counter 0 test-counter 4;
+}
+
+.counter {
+    list-style: none;
+    margin: 0;
+    padding: 0; 
+}
+
+.counter li {
+    font-size: 30px;
+    
+}
+
+.counter li::before {
+    counter-increment:list-counter 1;
+    content: counter(list-counter, upper-roman) ". ";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: lightblue;
+    color: white;
+    text-align: center;
+    border-radius:50% ;
+    margin: 10px;
+
+}
+
+/* default display of psudo-elements is inline because it's the initial value of display 
+so here we wrote dispaly:inline-block to accept width and height
+position:absolute will accept width and height because it is outside normal flow and has it's own rules*/
+
+/* you can do it by 2 or 3 steps
+2 steps by adding counter-increment:list-counter 1 ; to real element and the content: counter(list-counter); at psudo element 
+3 steps by adding counter-reset: list-counter 0; at parent  counter-increment:list-counter 1 ; to real element 
+and the content: counter(list-counter); at psudo element  
+with 3 steps you can determine the count start from where and every count add 1 or 2 or .... 
+with 2 steps you can determine only every count add 1 or 2 or .... */
+
+/* .counter-test div {
+    font-size: 30px;
+    
+}
+
+.counter-test div::before {
+    counter-increment:test-counter 1;
+    content: counter(test-counter) ". ";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: lightcoral;
+    color: white;
+    text-align: center;
+    border-radius:50% ;
+    margin: 10px;
+} */
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+.variable {
+    --main-color: blue; 
+    --alt-color: red; 
+}
+
+.variable p {
+    color: var(--main-color , yellow);
+}
+
+.variable div {
+    color: var(--alt-color , yellow);
+}
+/* global variable means for all when you write it at :root{} 
+local varaible when you write it at element or parent*/
+
+/* usually we add variable at :root{} or you can write it at HTML tag on HTML file with style like
+<html lang="en" style="--main-color: blue;"> */
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* we have 6 types of Psudo-elements
+1. First Letter
+2. First Line
+3. After
+4. Before
+5. marker
+6. selection */
+
+
+
+/* to add icons you can add it at HTML file with dec code like this &#129409; or HEX code like this &#x1F981;  
+or you can add it by using psudo-element and content:"\00AE*/
+
+.icons li {
+    margin: 10px;
+    padding-left: 10px ;
+}
+
+/* marker works only with li so it's always li::marker or you can write only ::marker */
+
+.icons > ::marker {
+    color: grey;
+    font-size: 20px;
+    font-weight: bold;
+    content: "\f5c9";
+    font-family: 'FontAwesome';
+}
+
+span::before {
+    content: "\00AE";
+}
+
+i { 
+    color: green;
+}
+
+.psudo-selection::selection {
+    color: red;
+    background: yellow;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+ /* we have 3 options to keep float inside it's container 
+ 1. overflow:hidden; or overflow:auto; 
+ 2. hack way 
+ 3. clear:both; on element inside the container*/
+
+.overflow {
+    background-color: red;
+    color: white;
+    /* overflow:hidden; */
+    overflow: auto;
+}
+
+.overflow-child {
+    background-color: blue;
+    color: white;
+    margin: 10px 0;
+    float: left;
+    width: 50%;
+}
+
+/* .overflow-clear {
+    clear: both;
+} */
+
+
+/* hack way */
+
+/* .overflow::after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    clear: both;
+    height: 0;
+} */
+
+/* .overflow::after {
+    content: "";
+    display: block;
+    clear: both;
+} */
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+/* difference between rem and em 
+rem = Root em will inherit from Root
+em will inherit from Parent  */
+
+/* some properites can be inherit and some not [ inherited properites - non inherited properites ]  */
+
+.inherit { 
+    color: green;
+    font-size: 50px;
+    font-weight: bold;
+    height: 200px;
+    background-color: #eee;
+    text-align: center;
+    padding: 20px;
+    border: solid 5px red;
+}
+
+.inherit * { 
+    margin: 0;
+    border: inherit;
+    margin-bottom: 10px;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* ID is stronger than Class  */
+/* ID can be used with links  */
+
+
+

@@ -1,0 +1,2917 @@
+/* .shape-parent {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+.shape1 {
+    background-color: #eee;
+    width: 25%;
+    display: flex;
+    border: 15px solid red;
+    height: 200px;
+    font-size: 60px;
+    justify-content: center;
+    align-items: center;
+    outline: 15px solid black;
+    
+}
+.shape2 {
+    background-color: #eee;
+    width: 25%;
+    display: flex;
+    border-top: 15px solid blue;
+    border-bottom: 15px solid blue;
+    border-left: 15px solid green;
+    border-right: 15px solid green;
+    height: 200px;
+    font-size: 60px;
+    justify-content: center;
+    align-items: center;
+    outline: 15px solid black;
+    
+    
+}
+.shape3 {
+    background-color: #eee;
+    width: 25%;
+    display: flex;
+    border-top: 15px dashed red;
+    border-bottom: 15px dashed blue;
+    border-left: 15px dashed yellow;
+    border-right: 15px dashed green;
+    height: 200px;
+    font-size: 60px;
+    justify-content: center;
+    align-items: center;
+    outline: 15px solid black;
+} */
+
+.shape-parent {
+    display: flex;
+    justify-content: space-between;
+}
+/* Osama told us not to add width because if you add width the text will not be centered and you have to center it using flex or position or vertical-align */
+.shape1 {
+    border: 5px red solid;
+    outline: 5px black solid;
+    background-color: #eee;
+    display: inline-block;
+    padding: 15px;
+    margin: 20px;
+    
+}
+.shape2 {
+    border-color: blue green;
+    border-style: solid;
+    border-width: 5px;
+    outline: 5px black solid;
+    background-color: #eee;
+    display: inline-block;
+    padding: 15px;
+    margin: 20px;
+}
+.shape3 {
+    border-color: red green blue yellow;
+    border-style: dashed;
+    border-width: 5px;
+    outline: 5px black solid;
+    background-color: #eee;
+    display: inline-block;
+    padding: 15px;
+    margin: 20px;
+}
+
+
+/* ------------------------------------------------------- */
+
+/* 
+.Note1 {
+    background-color:#eee;
+    height: 200px;
+    margin-bottom: 50px;
+}
+.Note2 {
+    background-color:#eee;
+    height: 200px;
+    margin-bottom: 50px;
+    visibility: hidden;
+}
+.Note3 {
+    background-color:#eee;
+    height: 200px;
+    margin-bottom: 50px;
+   
+}
+
+.note1-child1 {
+    background-color: salmon;
+    height:125px;;
+    width: 15px;
+    display: inline-block;
+    position: relative;
+    top: 50px;
+    left: 30px;
+}
+.note2-child1 {
+    background-color: salmon;
+    height:125px;
+    width: 15px;
+    display: inline-block;
+    position: relative;
+    top: 50px;
+    left: 30px;
+}
+.note3-child1 {
+    background-color: lightseagreen;
+    height:125px;
+    width: 15px;
+    display: inline-block;
+    position: relative;
+    top: 50px;
+    left: 30px;
+}
+
+.note1-child2 {
+    font-size: 50px ;
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+    top: 10px;
+    left: 30px;
+    
+}
+.note2-child2 {
+    font-size: 50px ;
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+    top: 10px;
+    left: 30px;
+}
+.note3-child2 {
+    font-size: 50px ;
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+    top: 10px;
+    left: 30px;
+} */
+
+.important1 {
+    background-color: #eee;
+    width: 400px;
+    margin: 30px;
+    padding: 20px;
+    border-left: 8px solid red;
+    outline:#eee 20px solid ;
+}
+.important2 {
+    background-color: #eee;
+    width: 400px;
+    margin: 30px;
+    padding: 20px;
+    visibility: hidden;
+    border-left: 8px solid red;
+    outline:#eee 20px solid ;
+}
+.important3 {
+    background-color: #eee;
+    width: 400px;
+    margin: 30px;
+    padding: 20px;
+    border-left: 8px solid green;
+    outline:#eee 20px solid ;
+}
+
+/* ---------------------------------------- */
+
+
+
+/* .parent .child span {
+    color: red;
+}
+
+.parent > span {
+    color: blue;
+}
+
+.parent span { 
+    color:yellow; 
+}
+
+.parent p ,
+.title { 
+    color: green;
+} */
+
+
+
+
+.parent .child .title {
+    color: red;
+}
+
+.parent .title {
+    color: blue;
+}
+
+.parent p,
+.title {
+    color: green;
+}
+
+/* all elements with class="title" not colored green because when you select element by his parent and give him a color it will override the given color by only his class name (.title)
+but with direct child like exp. above ( .parent > span) will not override the given color by ( .parent span) but (.parent .child span) will override ( .parent span)   */
+
+/* -------------------------------------------------------- */
+
+.fit {
+    color: white;
+    font-size: 20px;
+    background-color: darkred;
+    width: fit-content;
+    margin-bottom: 20px;
+    max-width: 400px;
+    padding: 20px;
+    max-height: 80px;
+    overflow: hidden;
+}
+
+
+/* -------------------------------------------------------- */
+
+.shadow {
+    font-size: 120px;
+    text-align: center;
+    text-shadow: 3px 3px 0 orangered, 6px 6px 0 lightskyblue, 9px 9px 0  violet;
+}
+
+/* -------------------------------------------------------- */
+
+.one {
+    text-transform:uppercase;
+    text-align: center;
+    font-size: 60px;
+}
+.two {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 60px;
+}
+.three {
+    text-transform: lowercase;
+    text-align: center;
+    font-size: 60px;
+}
+
+/* -------------------------------------------------------- */
+
+.lorem1 {
+    background-color: #eee;
+    width: 400px;
+    font-size: 19.5px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.lorem2 {
+    background-color: #eee;
+    width: 400px;
+    font-size: 19.5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 20px;
+    
+    
+}
+.lorem3 {
+    background-color: #eee;
+    width: 400px;
+    font-size: 19.5px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* -------------------------------------------------------- */
+
+.zero-parent {
+    /* position: relative;
+    height: 200px; */
+    text-align: center;
+    
+}
+
+.zero {
+    background-color: green;
+    color: white;
+    padding: 30px 60px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 70px;
+    border-bottom: 20px solid darkgreen ;
+    /* position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+    /* or */
+    /* display: block;
+    margin: 20px auto;
+    width: 200px;  */
+    /* or */ 
+    /* with text-align: center; at parent <a> tag is inline level element or (inline-block) and it will center it like text but if block level it will center the text inside it's container not inside parent */
+    display: inline-block;
+    
+   }
+
+  /* -------------------------------------------------------- */
+
+  .p-parent {
+      padding: 50px;
+      border: 5px solid blue;
+      text-align: center;
+  }
+
+  .p-child {
+      background-color: #eee;
+      font-size: 50px;
+      padding: inherit;
+      border: inherit;
+
+  }
+
+  /* -------------------------------------------------------- */
+
+  .font1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100px;
+    text-align: center;
+  }
+  .font2 {
+    font-family: 'Cairo', sans-serif;
+    font-size: 100px;
+    text-align: center;
+  }
+  .font3 {
+    font-family: 'Jomhuria', cursive;
+    font-size: 100px;
+    text-align: center;
+  }
+
+ /* -------------------------------------------------------- */
+
+ :root {
+     font-size: 20px;
+ }
+
+ .font4 {
+    font-family: 'Cairo', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    font-size: 50px;
+  }
+  .font5 {
+    font-family: 'Cairo', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .font6 {
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+/* -------------------------------------------------------- */
+
+.float-parent {
+    width: 800px;
+    background-color: #eee;
+    height: 290px;
+    margin: 20px auto;
+}
+
+.float-parent div {
+    background-color: gray;
+    text-align: center;
+    float: left;
+    
+}
+
+.f1 {
+    width: calc(100% - 30px);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 15px;
+}
+
+.f2,
+.f3,
+.f4 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: calc((100% - 60px) / 3);
+    margin-left: 15px;
+    margin-bottom: 15px;
+    
+}
+.f4 {
+    margin-right: 15px;
+}
+
+.f5 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: calc( ( 100%  - 45px) / 2);
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.f6 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: calc( ( 100%  - 45px) / 2);
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+.f7,
+.f8,
+.f9 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: calc( ( 100%  - 75px) / 4);
+    margin-left: 15px;
+    margin-bottom: 15px;
+
+}
+
+.f10 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: calc( ( 100%  - 75px) / 4);
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+/* -------------------------------------------------------- */
+
+.normal1 {
+    margin: 20px auto;
+    width: 300px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 20px;
+    background-color: rgb(179, 177, 177 );
+    color: black;
+  }
+.normal2 {
+    margin: 20px auto;
+    width: 300px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 20px;
+    background-color: rgb(179, 177, 177, 0.1 );
+    color: black;
+  }
+.normal3 {
+    margin: 20px auto;
+    width: 300px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 20px;
+    background-color: rgb(179, 177, 177);
+    opacity: 0.1;
+    color: black;
+  }
+
+/* -------------------------------------------------------- */
+
+
+.pos-parent {
+    position: relative;
+    background-color: #eee;
+    height: 400px;
+}
+
+.pos-parent div {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+
+}
+
+.green {
+    background-color: green;
+    z-index: 2;
+    top: 30px;
+    left: 30px;
+    
+}
+
+.red {
+    background-color: red;
+    z-index: 3;
+    top: 40px;
+    left: 40px;
+}
+
+.blue {
+    background-color: skyblue;
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+}
+
+.black { 
+    background-color: black;
+    top: 30px;
+    left: 20px;
+}
+
+/* -------------------------------------------------------- */
+
+.pos-parent2 {
+    width: 400px;
+    margin: 20px auto;
+    position: relative;
+    border-top: 3px solid red;
+    border-bottom: 3px solid red;
+    border-left: 3px solid rgb(67 113 213);
+    border-right: 3px solid rgb(67 113 213);
+    background-color: #eee;
+    text-align: center;
+}
+
+.top-left {
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    padding: 5px 10px;
+    background-color: rgb(67 113 213);
+    border-right: 3px solid red;
+    color: white;
+}
+
+.bottom-left {
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+    padding: 5px 10px;
+    background-color: rgb(67 113 213);
+    border-right: 3px solid red;
+    color: white;
+}
+
+.top-right {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    padding: 5px 10px;
+    background-color: rgb(67 113 213);
+    border-left: 3px solid red;
+    color: white;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    padding: 5px 10px;
+    background-color: rgb(67 113 213);
+    border-left: 3px solid red;
+    color: white;
+}
+
+/* -------------------------------------------------------- */
+/* 
+.table-parent {
+    margin: 20px auto;
+    width: 400px;
+    list-style: none;
+    
+
+}
+.li-parent {
+    margin: 20px;
+    background-color: #eee;
+    padding: 10px;
+    counter-reset: li-counter 9;
+    position: relative;
+}
+
+.li-parent2 {
+    margin: 20px;
+    background-color: #eee;
+    padding: 10px;
+    counter-reset: li2-counter 9;
+    position: relative;
+    
+}
+
+.ol-parent li::before{
+    content:counter(li-counter) ". ";
+    display: inline-block;
+    counter-increment: li-counter 1;
+    position: absolute;
+    left: 20px;
+  
+}
+
+.ol-parent2 li::before {
+    content:counter(li2-counter, upper-roman) ". ";
+    display: inline-block;
+    counter-increment: li2-counter 1;
+    position: absolute;
+    left: 15px;
+
+}
+.ol-parent,
+.ol-parent2 {
+    list-style: none;
+}
+
+.ol-parent li,
+.ol-parent2 li
+ {
+    background-color: white;
+    margin: 3px;
+    padding: 0 10px;
+      
+}
+
+
+.li-parent3 {
+    margin: 20px;
+    background-color: #eee;
+    padding: 10px;
+    
+}
+.ul-parent {
+    list-style: circle inside;
+    padding: 0;
+}
+.ul-parent li {
+
+    margin: 5px;
+    background-color: white;
+    padding: 0 10px;
+    
+} */
+
+/* previous codes i used psudo element to put custom no. before list but you can use attribute start="10" to start count from 10 and type="I" to count by upper roman */
+
+
+.parent {
+    list-style: none;
+    width: 400px;
+    margin: 20px auto;
+}
+
+.container {
+    background-color: #eee;
+    padding: 10px;
+    margin: 20px;
+
+}
+
+
+.in {
+    margin: 5px;
+    background-color: white;
+    padding: 0 10px;
+} 
+
+ol,
+.child {
+    background-color: #eee;
+} 
+
+.child { 
+    list-style: circle inside;
+    padding: 0;
+}
+
+
+/* -------------------------------------------------------- */
+
+.table-parent {
+    margin: 20px auto;
+    width: 700px;
+    text-align: center;
+    border-collapse: collapse;
+    /* border-bottom: #189585 solid 3px; */
+    /* border-spacing and border-collapse:separate (default value)  to change the spaces between cells */
+    /* border-spacing: 10px; */
+
+}
+
+.table-parent th, 
+.table-parent td
+ {
+    background-color: #eee;
+    border : 2px solid white;
+    padding: 0px;
+ 
+}
+
+.table-parent th {
+    background-color: #000000bf;
+    color: white;
+    font-size: 25px;
+    padding:20px 10px;
+    
+    
+}
+
+.view {
+    display: inline-block;
+    padding: 5px;
+    width: 70px;
+    color: white;
+    background-color: #0056ffa6;
+}
+.delete {
+    display: inline-block;
+    padding: 5px;
+    width: 70px;
+    color: white;
+    background-color: #ff0000b3;
+}
+
+
+/* 2 ways to put line under table 
+ tfoot and tr inside and td inside and td ( colspan="5" ) and remove border for them and remove border bottom from previous row and add border-bottom in table parent
+  or  tfoot and tr inside and td inside and td ( colspan="5" ) and remove border for them and remove border bottom from previous row and give this tfoot td background and height*/
+
+/* i add .first-last and removed border-left and right because when you increase border to high no. of px the line will at the end will expand also so i removed border right and left to stop this */
+
+.last-foot td {
+    border: none;
+    background-color: #189585 ;
+    height: 2px;
+}
+
+.last td {
+    border-bottom: none;
+}
+
+.first-last {
+    border-left: none !important;
+    border-right: none !important;
+    
+}
+
+/* -------------------------------------------------------- */
+
+.one-34,
+.three-34 {
+    background-color: #eee;
+    margin: 20px auto;
+    width: 300px;
+    height: 60px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* text-align: center;
+    line-height: 60px; */
+    display: grid;
+    place-items: center;
+}
+.two-34 {
+    background-color: red;
+    margin: 20px auto;
+    width: 300px;
+    height: 60px;
+}
+
+/* -------------------------------------------------------- */
+
+.psudo-35 {
+    background-color: #e9e9e9;
+    padding: 50px;
+    max-width: 650px;
+    margin: 20px auto;
+    font-size: 40px;
+    position: relative;
+}
+
+.psudo-35::first-letter {
+    /* visibility: hidden; */
+    background-color:#ff5e5e;
+    color: white;
+    padding: 30px 20px;
+    margin-left: -75px;
+    margin-right: 10px;
+
+}
+
+/* .psudo-35::before {
+    content: "1";
+    background-color:#ff5e5e;
+    color: white;
+    font-size: 50px;
+    width: 60px;
+    height: 110px;
+    position: absolute;
+    left: -30px;
+    top: 17px;
+    text-align: center;
+    line-height: 110px;
+} */
+
+/* two ways 1st : make first letter hidden then use psudo-element // 2nd : use psudo-class ( first letter) and increase width and height by padding and move by margin */
+
+/* -------------------------------------------------------- */
+
+.psudo-36 {
+    background-color: #eee;
+    padding: 20px;
+    font-size: 20px;
+    width: 500px;
+    margin: 20px auto;
+    position: relative;
+    border-left: red solid 5px;
+}
+
+.psudo-36::before {
+    content: attr(data-person);
+    background-color: #eee;
+    padding: 10px;
+    position: absolute;
+    left: -130px;
+    top: 10px;
+    width: 75px;
+    text-align: center;
+}
+
+.psudo-36::after {
+    content: "";
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent red transparent transparent;
+    position: absolute;
+    left: -32px;
+    top: 18px;
+} 
+
+/* -------------------------------------------------------- */
+
+
+
+.psudo-37 {
+    background-color: #eee;
+    padding: 20px;
+    font-size: 20px;
+    width: 500px;
+    margin: 20px auto;
+    position: relative;
+    border-right: red solid 5px;
+    counter-increment: p-counter ;
+    
+}
+
+.psudo-37::before {
+    
+    content: counter(p-counter);
+    background-color: red;
+    color: white;
+    padding: 20px;
+    position: absolute;
+    left: -40px;
+    top: 0;
+
+}
+
+/* -------------------------------------------------------- */
+
+.assi-38 {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #eee;
+    display: inline-block;
+    margin-right: 80px;
+    counter-increment: p2-counter;
+    position: relative;
+    margin: 70px;
+    border: 5px solid black;
+    box-shadow: -12px -14px 0px 0px #ff00009c , 12px 14px 0px 0px rgb(50 161 231 / 89%);
+}
+
+
+.assi-38::before {
+    content: counter(p2-counter);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    position: absolute;
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+    left: 118px;
+    top: -23px;
+}
+
+.assi-38::after {
+    content: "Element";
+    font-size: 50px;
+    position:absolute;
+    left: 60px;
+    top: 116px;
+}
+
+/* -------------------------------------------------------- */
+
+.assi-parent {
+    height: 500px;
+    /* width: 900px; */
+    /* display: table-cell;
+    vertical-align: middle;
+    text-align: center; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+    place-items: center;
+
+}
+
+.assi-39 {
+    /* display: inline-block; */
+    width: 300px;
+    height: 300px;
+    background-color: #eee;
+    box-shadow: 0px 0px 30px 0px #000000bd inset;;
+    border-top-left-radius: 10px 25px;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 10px 25px;
+   
+}
+
+
+/* -------------------------------------------------------- */
+
+
+.assi-41-parent {
+    margin: 20px auto;
+    width: 1000px;
+}
+
+.box1-parent,
+.box2-parent {
+    height: 500px;
+    width: 400px;
+    background-color: #eee;
+    display: inline-block;
+    position: relative;
+    margin-right: 50px;
+}
+
+.box1-child,
+.box2-child {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #ded7d7bf;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    line-height: 300px;
+    font-size: 50px;
+
+}
+
+.box1-parent::before,
+.box2-parent::before {
+    content: "Basic";
+    background-color: rgb(0 169 255);
+    text-align: center;
+    padding: 10px 127px;
+    color: white;
+    position: absolute;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    left: 30px;
+    top: 40px;
+    font-size: 40px;
+}
+.box2-parent::before {
+    content: "Pro" ;
+    padding: 10px 145px;
+}
+
+.box1-parent::after {
+    content: "Or";
+    border-radius: 50%;
+    padding: 7px;
+    background-color:rgb(0 169 255) ;
+    color:white;
+    position: absolute;
+    left: 410px;
+    top:230px;
+}
+
+.box2-parent::after {
+    content: "";
+    width: 3px;
+    height: 500px;
+    background-color:rgb(0 169 255) ;
+    position: absolute;
+    left: -30px;
+    top: 0;
+    z-index: -1;
+}
+
+/* -------------------------------------------------------- */
+
+.assi-42-parent {
+    width: 1200px;
+    height: 600px;
+    background-color: #f8c9c9;
+    margin: 20px auto;
+    /* position: relative; */
+    border: 10px solid transparent;
+    /* padding: 10px; */
+}
+
+
+.assi-42{
+    background-color: #eee;
+    text-align: center;
+    padding: 20px;
+    font-size: 45px;
+    transition-duration: 0.5s;
+    height:400px;
+    width: 800px;
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+    margin: 60px 200px;
+    /* display: inline-block; */
+    
+}
+
+.assi-42-child {
+    background-color: #c2bebe;
+    text-align: center;
+    padding: 40px 30px;
+    font-size: 35px;
+    width: 600px;
+    /* position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%); */
+    transition-delay: 0.5s;
+    transition-duration: 0.5s;
+    margin: 50px 70px;
+    /* display: inline-block; */
+    
+}
+
+.assi-42:hover {
+    /* left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%); */
+    margin: 20px 200px;
+    
+}
+.assi-42:hover .assi-42-child {
+    /* left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+    margin: 80px 70px;
+    
+}
+
+/* to move div inside div using margin you have two options to make it works
+1. child display:inline-block; 
+2. add border or padding 1px to parent  */
+
+/* -------------------------------------------------------- */
+
+.assi-43 {
+    background-color: #eee !important;
+    color: black !important;
+    text-align: center;
+    border: none !important;
+    font-size: 0px !important;
+    /* color: transparent !important; */
+    margin: 20px auto;
+    width: 400px;
+    position: relative;
+    height: 100px;
+    /* text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden; */
+    
+    
+}
+
+.assi-43::before {
+    content: "Elzero";
+    font-size: 40px;
+    position: absolute;
+    left:39%;
+    top:33%;
+
+}
+
+/* to hide text you have a lot of options 
+1. font-size: 0;
+2. if text inside span inside div : 
+        a. dispaly:none; but it will remove text completey from page
+        b. visibilty:hidden;  
+3. .hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
+4. color:transparent; */
+
+/* -------------------------------------------------------- */
+
+/* :root {
+    --mainColor: #009688;
+    --mainPadding: 10px;
+  }
+   */
+.assi-44 {
+    border: 2px solid var(--mainColor, black);
+    padding: var(--mainPadding, 10px);
+    color: var(--mainColor, red);
+    margin: 20px auto;
+    width: 400px;
+  }
+
+  /* -------------------------------------------------------- */
+
+  .assi-46 {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: #eee;
+      color:#ff0000a3;
+      font-size: 50px;
+      font-weight: bold;
+      box-shadow: 17px 0px 0px 0px #ff0000a3, -17px 0px 0px 0px #009dff ;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+  }
+
+   /* -------------------------------------------------------- */
+
+   .assi-47-parent {
+       width: 800px;
+       height: 400px;
+       margin: 20px auto;
+       display: flex;
+       align-content: space-between;
+       flex-wrap: wrap;
+       background-color: #eee;
+       text-align: center;
+      
+   }
+
+   .assi-47-parent div {
+       padding:10px 20px;
+       background-color: #ff0000a6;
+       color: white;
+       font-size: 30px;
+       margin: 10px;
+       width: calc((100% - 180px) / 3);
+       height: 40px;
+       
+
+
+   }
+
+    /* -------------------------------------------------------- */
+
+    .assi-48-parent {
+        background-color: #eee;
+        width: 1000px;
+        height: 500px;
+        margin: 20px auto;
+        display: flex;
+        flex-wrap:wrap;
+        padding: 15px;
+        
+       
+        
+    }
+
+    .assi-48-parent div {
+        background-color: #2e6c66 ;
+        color: white;
+        margin: 0 10px;
+        width: calc((100% - 60px) / 3);
+        height: calc(50%);
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .one48 {
+        order: 6;
+        align-self: flex-end;
+        height: 50px !important;
+        
+    }
+    .two48 {
+        order: 5;
+        
+        
+    }
+    .three48 {
+        order: 2;
+        height: 50px !important;
+    }
+    .four48 {
+        order: 3;
+       
+    }
+    .five48 {
+        order: 4;
+       
+        
+    }
+    .six48 {
+        order: 1;
+        
+    }
+
+/* -------------------------------------------------------- */
+
+.assi-49-parent {
+    background-color: #eee;
+    width: 1000px;
+    height: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* text-align: center; */
+
+}
+
+.assi-49-parent div {
+    background-color: #2e6c66 ;
+    color: white;
+    margin: 10px;
+    height: calc((100% - 60px) / 3) ;
+    /* line-height: calc((100% - 60px) / 3); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.two49 {
+    align-self: flex-start;
+    width: calc(50% - 20px);
+    
+}
+
+.one49, 
+.three49 {
+    width: 50px;
+    
+}
+
+/* -------------------------------------------------------- */
+
+.assi-50-parent {
+    background-color: #eee;
+    width: 700px;
+    height: 500px;
+    margin: 20px auto;
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+
+}
+
+.assi-50-parent div {
+    height: calc(100% / 2);
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.one50 {
+    order: 2;
+    background-color: orange;
+    
+}
+.two50 {
+    order: 3;
+    background-color: #32bf45;
+    align-self: flex-end;
+}
+.three50 {
+    order: 4;
+    background-color: #954b4b;
+}
+.four50 {
+ order: 1;
+ background-color: #6c5bbf;
+ align-self: flex-end;
+}
+
+/* -------------------------------------------------------- */
+
+:root {
+    --mainColor51: #d1cccc;
+    --mainPadding51: 15px;
+  }
+   
+.page-51 {
+    width: 1375px;
+    height: 600px;
+    padding: var(--mainPadding51);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #eee;
+    
+}
+
+.header-51 {
+    display: flex;
+    justify-content: space-between;
+    /* height: 8%; */
+    flex-basis: 8%;
+}
+
+.logo-51 {
+   background-color: var(--mainColor51);
+   padding: var(--mainPadding51);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* width: calc((100% - 70px) * 0.05); */
+   flex-grow: 0.5;
+   /* flex: 0.5; */
+   
+}
+
+.links-51 { 
+    list-style: none;
+    padding: 0;
+    display: flex;
+    padding: var(--mainPadding51);
+    background-color: var(--mainColor51);
+    justify-content: flex-end;
+    margin: 0 ;  
+    /* width: calc((100% - 70px) * 0.95); */
+    flex-grow: 9.5;
+    /* flex: 9.5; */
+    margin-left: 10px;
+
+}
+.links-51 li {
+    margin-left: 10px;
+} 
+
+.main-area-51 {
+    display: flex;
+    /* justify-content: space-between; */
+    /* height: 80%; */
+    flex-basis: 80%;    
+}
+.content-51 {
+    background-color: var(--mainColor51);
+    padding: var(--mainPadding51);
+    /* width: calc( (100% - 70px ) * 0.75); */
+    flex-grow: 3;
+    /* flex: 3; */
+}
+.sidebar-51 {
+    background-color: var(--mainColor51);
+    padding: var(--mainPadding51);
+    margin-left: 10px;
+    /* width: calc( (100% - 70px ) * 0.25 ); */
+    flex-grow: 1;
+    /* flex: 1; */
+    
+    
+}
+.footer-51 {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--mainPadding51);
+    background-color: var(--mainColor51);
+    /* height: 3%; */
+    flex-basis: 3%;
+    
+    /* difference between flex-basis and height or width 
+    when you give element width it will not take from spaces between flex childs to take minimum height or width for it's content to display but if you give this element flex-basis 
+    it will take from the space between flex childs to take height enough to display it's content */
+
+    /* difference between flex-basis:0; and flex-basis:auto; 
+    (0) will  distribute free spaces without respecting content of flex items and try to make them equal but if content of one element very large it will give him width more than others but will not give him extra space 
+    (auto) will distribute free spaces with respecting content of flex items so will not try to be equal and if content of one element very large it will give him width more than others and give him also extra spaces
+    (0) will try to make element have equal width but (auto) will try to give elements equal extra spaces 
+    */
+}
+
+/* -------------------------------------------------------- */
+
+.assi-54 {
+    background-color: #eee;
+    width:900px;
+    font-size: 50px;
+    margin: 20px auto;
+    text-align: center;
+    letter-spacing: 10px;
+    padding: 30px;
+    border: 10px solid transparent;
+    border-image:linear-gradient(to right, red 20%, #0583b6 20%, #0583b6 40%, green 40%, green 60%, red 60%, red 80%, #673ab7 80%, #673ab7 100%) 13 30 7;
+     /* position: relative; */
+}
+
+/* .assi-54::before {
+    content: "";
+    background-image: linear-gradient(to right, red 20%, #0583b6 20%, #0583b6 40%, green 40%, green 60%, red 60%, red 80%, #673ab7 80%, #673ab7 100%) ;
+    width: 980px;
+    height: 139px;
+    position: absolute;
+    left:-10px;
+    top: -10px;
+    z-index: -1;
+} */
+
+.assi-54::first-letter {
+    color: red;
+}
+
+/* -------------------------------------------------------- */
+
+.assi-55-1,
+.assi-55-2,
+.assi-55-3 {
+    width: 900px;
+    background-color: #eee;
+    padding: 30px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 5px solid transparent;
+    border-image:linear-gradient(to right, #f25454 50%, #29b39e 50%, #29b39e 100%) 1;
+}
+
+.assi-55-1:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+/* border-image is shorthand of [ border-image-outset / border-image-repeat / border-image-slice / border-image-source / border-image-width ] 
+when you give border-image-slice a no. for exp. 30 it means it will slice ( cut) from left top corner a piece width 30px and repeat the rest to reach the other corner see video to understant it */
+/* psudo element does not work with input ( self-closing tag (Void-elements )  */
+
+
+/* -------------------------------------------------------- */
+
+.assi-57 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 1200px;
+    height: 600px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3 , auto);
+    grid-template-rows: 70px 1fr;
+    gap: 20px 20px;
+    counter-reset: element-no 0 ;
+  }
+
+.assi-57 div {
+    background-color: #3f6e82;
+    position: relative;
+    counter-increment: element-no 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+.assi-57 div::before {
+    content: "Element " counter(element-no);
+    position:absolute;
+    color: white;
+    font-size: 35px;
+
+}
+
+/* -------------------------------------------------------- */
+
+
+.assi-58 {
+    height: 100vh;
+    grid-template-rows: 70px auto 70px;
+    grid-template-columns: 3fr 1fr;
+    display: grid;
+    grid-template-areas: "head head" "section aside" "footer footer";
+}
+
+.assi-58 header {
+    grid-area: head;
+    background-color: #2196f3;
+    padding: 10px;
+}
+
+.assi-58 section{
+    grid-area: section;
+    background-color: #fb521f;
+    padding: 10px;
+}
+
+.assi-58 aside {
+    grid-area: aside;
+    background-color: #3f6e82;
+    padding: 10px;
+}
+
+.assi-58 footer {
+    grid-area: footer;
+    background-color: #045e56;
+    padding: 10px;
+}
+.assi-58 header::before {
+    content: "Header";
+    color: white;
+}
+
+.assi-58 section::before {
+    content: "Section";
+    color: white;
+}
+
+.assi-58 aside::before {
+    content: "Aside";
+    color: white;
+}
+
+.assi-58 footer::before {
+    content: "Footer";
+    color: white;
+}
+
+
+/* -------------------------------------------------------- */
+
+
+.assi-59 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 1200px;
+    height: 600px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr auto;
+    grid-template-rows: 1fr auto;
+    gap: 25px 25px;
+  }
+  
+.assi-59 div {
+    color: white;
+    font-size: 30px;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------------------------------------------- */
+
+/* .assi-60 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 1200px;
+    height: 600px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-areas: "h8 h8" "h2 h3" "h4 h5" "h6 h5"  "h7 h5" "h1 h1";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(6 , auto);
+    gap: 25px 25px;
+}
+
+  .assi-60 div {
+    background-color: #2196f3;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .one60 {
+      grid-area: h1;
+  }
+  .two60 {
+      grid-area: h2;
+      width: 200%;
+
+  }
+  .three60 {
+      grid-area: h3;
+      width: 50%;
+      justify-self: flex-end;
+  }
+  .four60 {
+      grid-area: h4;
+  }
+  .five60 {
+      grid-area: h5;
+  }
+  .six60 {
+      grid-area: h6;
+  }
+  .seven60 {
+      grid-area: h7;
+  }
+  .eight60 {
+      grid-area: h8;
+  } */
+
+
+/* .assi-60 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 1200px;
+    height: 600px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-areas: "h8 h8 h8" "h2 h2 h3" "h4 h5 h5" "h6 h5 h5"  "h7 h5 h5" "h1 h1 h1";
+    grid-template-columns: repeat(3, fr);
+    grid-template-rows: repeat(6 , auto);
+    gap: 25px 25px;
+}
+
+  .assi-60 div {
+    background-color: #2196f3;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .one60 {
+      grid-area: h1;
+      
+  }
+  .two60 {
+      grid-area: h2;
+
+  }
+  .three60 {
+      grid-area: h3;
+      
+  }
+  .four60 {
+      grid-area: h4;
+  }
+  .five60 {
+      grid-area: h5;
+  }
+  .six60 {
+      grid-area: h6;
+  }
+  .seven60 {
+      grid-area: h7;
+  }
+  .eight60 {
+      grid-area: h8;
+  }  */
+
+
+.assi-60 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 1200px;
+    height: 600px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, fr);
+    grid-template-rows: repeat(6 , auto);
+    gap: 25px 25px;
+}
+
+  .assi-60 div {
+    background-color: #2196f3;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .one60 {
+      grid-area: 6 / span 3;
+      
+  }
+  .two60 {
+      grid-area: 2 / span 2;
+
+  }
+  
+  .five60 {
+    /* grid-row: 3 / 6;
+    grid-column: 2 / 4; */
+    /* grid-area: 3 / 2 / 6 / 4; */
+    grid-area: 3 / 2 / span 3 / span 2;
+
+  }
+
+  .eight60 {
+    grid-area: 1 / span 3;
+  } 
+
+  /* -------------------------------------------------------- */
+
+  .assi-61 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 1200px;
+    height: 600px;
+    display: grid;
+    margin: 20px top;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: auto auto;
+    /* gap: 550px 10px; */
+    gap: 10px 10px;
+    align-content: space-between;
+  }
+
+  .assi-61 div {
+    background-color: crimson;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+  }
+
+  /* -------------------------------------------------------- */
+
+  .assi-62-parent {
+      width: 1200px;
+      height: 1500px;
+      background-color: #eee;
+      display: grid;
+      margin: 20px auto;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas:"one one two three" "four five five three" "four six six three" "seven eight nine ten" ;
+      gap: 5px 5px;
+      padding: 30px;
+  }
+
+  .assi-62-parent div {
+    background-color: white;
+    border-bottom: 3px solid red;
+    padding: 10px;
+    position: relative;
+    
+  }
+  
+  .assi-62-parent div::before {
+    content: " '' ";
+    font-size: 40px;
+    position: absolute;
+    right: 12px;
+    bottom: -16px;
+    color: #80808075;
+    transform: rotate(12deg);
+    letter-spacing: -2px;
+  }
+
+  /* .assi-62-parent div::after {
+    content: " '' ";
+    font-size: 40px;
+    color: gray;
+    transform: rotate(12deg);
+    letter-spacing: -2px;
+    display: flex;
+    height: 10%;
+    justify-content: flex-end;
+    align-items: flex-end;
+  } */
+/* to use flex on psudo-element you should give the real element width and height and write at psudo height:100%
+if you write display: flex; justify-content: flex-end; align-items: flex-end on real element will move psudo-element but 
+also will move the content of real element */
+  .one62 {
+      grid-area:one ;
+  }
+  .two62 {
+    grid-area: two;
+  }
+  .three62 {
+    grid-area: three;
+    background-color: black !important;
+  }
+  .four62 {
+    grid-area: four;
+  }
+  .five62 {
+    grid-area: five;
+    background-color: black !important;
+  }
+  .six62 {
+    grid-area: six;
+  }
+  .seven62 {
+    grid-area: seven;
+  }
+  .eight62 {
+    grid-area: eight;
+  }
+  .nine62 {
+    grid-area: nine;
+  }
+  .ten62 {
+    grid-area: ten;
+  }
+
+ /* -------------------------------------------------------- */
+
+ .assi-65 {
+     background-color: #eee;
+     color:#2196f3;
+     width: 300px;
+     height: 200px;
+     margin: 50px auto;
+     font-size: 40px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    position: relative;
+     
+ }
+
+ .assi-65::after {
+     content: "";
+    background-color:  #2196f3;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(-7deg);
+ }
+ .assi-65::before {
+     content: "";
+    background-color:  red;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    z-index: -2;
+    transform: rotate(7deg);
+ }
+
+ /* you can not use z-index with real and psudo elements because psudo element related to real elements and 
+ z-index of real elements is 0 so you should use negative value of position absolute to make real elements above psudo elements*/
+
+ /* -------------------------------------------------------- */
+
+ .assi-66 {
+     width: 200px;
+     height: 200px;
+     margin: 20px auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     background-color: #eee;
+     font-size: 30px;
+     border: solid red 6px;
+     border-left: white solid 6px;
+     position: relative;
+     
+ }
+
+ .assi-66::before {
+    content: "";
+    width: 212px;
+    height: 212px;
+    position: absolute;
+    border-radius: 50%;
+    border: solid #2196f3 6px;
+    border-right: transparent solid 6px;
+    z-index: -1;
+ }
+
+
+ /* -------------------------------------------------------- */
+
+ .assi-67 {
+     width: 200px;
+     height: 200px;
+     margin: 20px auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     background-color: #eee;
+     font-size: 30px;
+
+    
+
+     
+ }
+
+ .assi-67::after {
+    content: "";
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 50%;
+    border: solid red 6px;
+    border-left: transparent solid 6px;
+    z-index: -1;
+    transition: 0.5s  linear;
+    
+    
+ }
+ .assi-67::before {
+    content: "";
+    width: 212px;
+    height: 212px;
+    position: absolute;
+    border-radius: 50%;
+    border: solid #2196f3 6px;
+    border-right: transparent solid 6px;
+    z-index: -1;
+    transition: 0.5s  0.5s linear;
+    
+ }
+
+ .assi-67:hover::after {
+    transform: rotate(1turn);
+    
+ }
+
+ .assi-67:hover::before {
+    transform: rotate(-1turn);
+    
+    
+}
+
+ /* -------------------------------------------------------- */
+
+ .assi-68 {
+     width: 200px;
+     height: 120px;
+     background-color: orangered;
+     font-size: 50px;
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 70px auto;
+     position: relative;
+ }
+
+ .assi-68::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: orangered;
+    z-index: -1;
+    position: absolute;
+    transform: skew(6deg , 10deg);
+ }
+ .assi-68::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: orangered;
+    z-index: -2;
+    position: absolute;
+    transform: skew(-6deg , -10deg);
+ }
+
+ /* -------------------------------------------------------- */
+
+ .assi-69 {
+     width: 200px;
+     height: 120px;
+     margin: 50px auto;
+     background-color: #009688;
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     /* transform: skewX(12deg); */
+ }
+ .assi-69::before {
+     content: "";
+     width: 14%;
+     height: 100%;
+     background-color: #009688;
+     position: absolute;
+     /* left: -55px; */
+     left: -19px;
+     transform: skewX(17deg);
+     border-right: solid white 10px;
+ }
+ /* .assi-69::after {
+     content: "";
+     width: 100%;
+     height: 100%;
+     margin: 50px auto;
+     background-color: #009688;
+     position: absolute;
+     transform: skewX(17deg);
+     z-index: -1;
+     left: -18px;
+
+ } */
+
+
+  /* -------------------------------------------------------- */
+
+  .assi-70 {
+      width: 300px;
+      height: 300px;
+      background-color: #3f6e82;
+      margin: 200px auto;
+      position: relative;
+      border-bottom: solid black 7px;
+      display: flex;
+      align-items: flex-end;
+  }
+
+  .assi-70::before {
+    content: "";
+    width: 69%;
+    height: 69%;
+    background-color: black;
+    border: solid white 5px;
+    position: absolute;
+    transform: rotate(45deg);
+    top: -106px;
+    left: 44px;
+    border-left: none;
+    border-top: none;
+}
+
+.assi-70::after {
+    content: "Elzero";
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    /* position: absolute;
+    bottom: 10px;
+    left: 15px; */
+    
+    
+}
+
+/*  you can move psudo element by using flex at real element if you wanr to write flex at psudo element 
+you should write height:100% at psudo-element to make align-items works 
+and width:100% at psudo-element to make justify-content works */
+
+/* -------------------------------------------------------- */
+
+.assi-71-3d {
+    perspective: 300px;
+}
+
+.assi-71 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    margin: 50px auto;
+    
+    
+}
+
+.assi-71::before {
+    content: "Back";
+    background-color: blue;
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+.assi-71::after {
+    content: "Front";
+    background-color: red;
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+
+}
+
+.assi-71:hover{
+    transform:rotateY(-180deg)
+}
+
+/* it's important to add backface-visibility and you will only know why when you use prespective because when you flip them on 3D you will see each backface of each card and cause flickering  */
+
+/* -------------------------------------------------------- */
+
+.assi-74 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: solid 15px #e1685f;
+    margin: 200px auto;
+    border-right: solid 15px transparent;
+    position: relative;
+    /* animation: spin 1s linear infinite; */
+}
+
+.assi-74::before {
+    content: "";
+    width: 130%;
+    height: 130%;
+    border-radius: 50%;
+    border: solid 15px #2196f3;
+    border-left: solid 15px transparent;
+    position: absolute;
+    left: -38px;
+    top: -38px;
+
+}
+.assi-74::after {
+    content: "";
+    width: 160%;
+    height: 160%;
+    border-radius: 50%;
+    border: solid 15px #f6b905;
+    border-top: solid 15px transparent;
+    position: absolute;
+    left: -59px;
+    top: -59px;
+
+}
+
+@keyframes spin {
+   
+    0% {
+        transform: rotate(0deg);
+    }
+ 
+    100% {
+        transform: rotate(360deg);
+    }
+
+   
+}
+
+.assi-74:hover {
+    animation-play-state: paused;
+}
+/* -------------------------------------------------------- */
+
+.assi-74 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: solid 15px #e1685f;
+    margin: 200px auto;
+    border-right: solid 15px transparent;
+    position: relative;
+    /* animation: spin 1s linear infinite; */
+}
+
+.assi-74::before {
+    content: "";
+    width: 130%;
+    height: 130%;
+    border-radius: 50%;
+    border: solid 15px #2196f3;
+    border-left: solid 15px transparent;
+    position: absolute;
+    left: -38px;
+    top: -38px;
+
+}
+.assi-74::after {
+    content: "";
+    width: 160%;
+    height: 160%;
+    border-radius: 50%;
+    border: solid 15px #f6b905;
+    border-top: solid 15px transparent;
+    position: absolute;
+    left: -59px;
+    top: -59px;
+
+}
+
+@keyframes spin {
+   
+    0% {
+        transform: rotate(0deg);
+    }
+ 
+    100% {
+        transform: rotate(360deg);
+    }
+
+   
+}
+
+.assi-74:hover {
+    animation-play-state: paused;
+}
+/* -------------------------------------------------------- */
+
+.assi-75 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: solid 15px #2196f3;
+    margin: 200px auto;
+    border-bottom: solid 15px transparent;
+    position: relative;
+    animation: spin 1s linear infinite;
+    animation-play-state:paused;
+}
+
+.assi-75::before {
+    content: "";
+    width: 130%;
+    height: 130%;
+    border-radius: 50%;
+    border: solid 15px #f6b905;
+    border-bottom: solid 15px transparent;
+    position: absolute;
+    left: -38px;
+    top: -38px;
+    animation: spin-back 3s linear infinite;
+    animation-play-state:paused;
+
+}
+.assi-75::after {
+    content: "";
+    width: 160%;
+    height: 160%;
+    border-radius: 50%;
+    border: solid 15px black;
+    border-bottom: solid 15px transparent;
+    position: absolute;
+    left: -59px;
+    top: -59px;
+    animation: spin-back 2s linear infinite;
+    animation-play-state:paused;
+
+}
+
+@keyframes spin {
+   
+    0% {
+        transform: rotate(0deg);
+    }
+ 
+    100% {
+        transform: rotate(360deg);
+    }
+
+   
+}
+@keyframes spin-back {
+   
+    0% {
+        transform: rotate(0deg);
+    }
+ 
+    100% {
+        transform: rotate(-360deg);
+    }
+
+   
+}
+
+
+
+.assi-75:hover::before,
+.assi-75:hover::after,
+.assi-75:hover {
+    animation-play-state:running;
+}
+
+
+/* -------------------------------------------------------- */
+
+.assi-76 {
+    display: block;
+    margin: 100px auto ;
+    width: 150px;
+    height: 150px;
+    background-color: #eee;
+    border: 15px solid black;
+    border-right: 15px solid transparent;
+    /* animation: spin-back 1s infinite linear reverse; */
+    border-radius: 50%;
+}
+
+/* we can use animation-direction:reverse; or  spin-back */
+
+/* -------------------------------------------------------- */
+
+/* .assi-77 {
+    width: 800px;
+    height: 700px;
+    margin: 20px auto;
+    background-color: #eee;
+    display: grid;
+    grid-template-areas: "e l" ;
+    gap: 30px;
+    padding: 20px;
+}
+
+.assi-77-e {
+    grid-area: e;
+    display: grid;
+    grid-template-areas: "e1 e2" "e1 ." "e1 e3" "e1 ." "e1 e4";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 2fr 1fr 2fr 1fr;
+    position: relative;
+}
+
+.assi-77-e::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: orange;
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    animation: move-e 5s linear 5s ;
+}
+
+@keyframes move-e {
+    0% {
+        top: 17px;
+        right: 10px;
+    }
+    10% {
+        top: 17px;
+        right: 317px;
+    }
+    20% {
+        top: 317px;
+        right: 317px;
+    }
+    30% {
+        top: 317px;
+        right: 10px;
+    }
+    40% {
+        top: 317px;
+        right: 317px;
+    }
+    50% {
+        top: 617px;
+        right: 317px;
+    }
+    60% {
+        top: 617px;
+        right: 10px;
+    }
+    70% {
+        top: 617px;
+        right: 317px;
+    }
+    80% {
+        top: 17px;
+        right: 317px;
+    }
+    100% {
+        top: 17px;
+        right: 10px;
+    }
+    
+
+}
+
+
+.assi-77-e div {
+    background-color: #393636;
+}
+
+.e1 {
+    grid-area: e1;
+}
+.e2 {
+    grid-area: e2;  
+}
+.e3 {
+    grid-area: e3;
+}
+.e4 {
+    grid-area: e4;   
+}
+
+
+
+.assi-77-l {
+    
+    display: grid;
+    grid-area: l;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 7fr 1fr;
+    grid-template-areas: "l1 ." "l1 l2";
+    position: relative;
+  
+}
+
+.assi-77-l div {
+    background-color: #393636;
+    
+}
+
+.l1 {
+    grid-area: l1;
+}
+.l2 {
+    grid-area: l2;
+}
+
+
+.assi-77-l::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: orange;
+    position: absolute;
+    right: 5px;
+    bottom: 13px;
+    animation: move-l 5s linear ;
+    opacity: 0;
+}
+
+@keyframes move-l {
+    0% {
+        right:5px;
+        bottom: 13px;
+        opacity: 100%;
+    }
+
+    30% {
+        right: 317px;
+        bottom: 13px;
+        opacity: 100%;
+    }
+   
+
+    80% {
+        right: 317px;
+        bottom: 633px ;
+        opacity: 100%;
+    }
+
+    100% {
+        right: 317px;
+        bottom: 633px ;
+        opacity: 0;
+    }
+} */
+
+.ass-4 {
+    width: 720px;
+    height: 600px;
+    padding: 20px;
+    margin: 80px auto;
+    background-color: #f0f0f0;
+    display: grid;
+    grid-template-columns: 80px 240px 40px 80px 240px ;
+    grid-template-rows: 80px 160px 80px 160px 80px;
+    position: relative;
+    
+}
+.ass-4 div {
+    background-color: #323234;   
+}
+.ass-4 .e-one {
+    grid-area: 1 / 1 / 6 / 2;
+}
+.ass-4 .e-two {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.ass-4 .e-three {
+    grid-area: 3 / 2 / 4 / 3;
+}
+.ass-4 .e-four {
+    grid-area: 5 / 2 / 6 / 3;
+}
+.ass-4 .l-five {
+    grid-area: 1 / 4 / 6 / 5;
+}
+.ass-4 .l-six {
+    grid-area: 5 / 5 / 6 / 6;
+}
+.ass-4 .e {
+    width: 55px;
+    height: 55px;
+    background-color: #FEA604;
+    position: absolute;
+    top: 32.5px;
+    left: 270px;
+    /* animation: animate-e 6s linear infinite; */
+}
+@keyframes animate-e {
+    0% {
+        transform: translate(0);
+    }
+    10% {
+        transform: translate(-237.5px, 0);
+    }
+    15% {
+        transform: translate(-237.5px, 240px);
+    }
+    20% {
+        transform: translate(0, 240px);
+    }
+    25% {
+        transform: translate(-240px, 240px);
+    }
+    30% {
+        transform: translate(-237.5px, 480px);
+    }
+    35% {
+        transform: translate(0, 480px);
+    }
+    40% {
+        transform: translate(-237.5px, 480px);
+    }
+    45% {
+        transform: translate(-237.5px, 0);
+    }
+    50% {
+        transform: translate(0);
+    }
+}
+.ass-4 .l {
+    width: 55px;
+    height: 55px;
+    background-color: #FEA604;
+    position: absolute;
+    bottom: 71px;
+    right: 71px;
+    /* animation: animate-l 6s linear infinite;  */
+    opacity: 0;
+}
+@keyframes animate-l {
+    55% {
+        transform: translate(0);
+        opacity: 0;
+    }
+    70% {
+        transform: translate(0);
+        opacity: 1;
+    }
+    80% {
+        transform: translate(-237.5px, 0);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(-237.5px, -480px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-237.5px, -480px);
+        opacity: 0;
+    }
+}
+
+
+/* difference between my answers and his answers that he use only one parent for both letters E and L and then he can merge two animations (keyframes) */
+
+/* -------------------------------------------------------- */
+/* 
+div.main.red1{
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+p.main.red1 {
+    margin: 0;
+} */
+/* because default margin of <p> is 1em */
+
+/* -------------------------------------------------------- */
+
+/* .parent78  div:nth-child(2) {
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+} */
+
+/* we can not use this [ div.parent78 > div:last-child ] because there is div inside div and it will inherit from it's parent*/
+
+
+/* -------------------------------------------------------- */
+
+
+/* .parent79 .baby79:only-child {
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+} */
+/* .parent79 .baby79:first-child:last-child{
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+} */
+
+/* -------------------------------------------------------- */
+
+/* div[title]:not(.no-need , .parent80 div) {
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+} */
+
+/* body > div[title]:not(.no-need) {
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+} */
+
+/* -------------------------------------------------------- */
+
+/* div[title]:not(.no-need1 , .no-need1 div):last-child {
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+} */
+
+/* -------------------------------------------------------- */
+
+/* div:not(.no-need div):nth-last-of-type(2):not(body > div) {
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+} */
+
+/* -------------------------------------------------------- */
+
+
+
+/* div:not(.no-need div , .no-need-2 div , .no-need , .no-need ~ div , p ~ div  ):nth-last-of-type(2):not(body > div){
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+} */
+
+
+/* -------------------------------------------------------- */
+
+/* div *:nth-child(-n + 5):not(div:first-child , h3){
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+} */
+
+/* -------------------------------------------------------- */
+
+@media print{
+    .assign-one {
+        font-size: 40px;
+    }
+}
+
+/* -------------------------------------------------------- */
+
+.assi-83 {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    
+}
+
+.assi-83  > div {
+    background-color: #eee;
+    width: calc((100% - 60px) / 4 ) ;
+    /* height: 100px;
+    display: grid;
+    place-content: center; */
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.assi-83  > div h3 {
+    margin: 0;
+    color: green;
+}
+
+@media (max-width: 700px) {
+    .assi-83 {
+        flex-wrap: wrap;
+        /* align-content: space-between;
+        height: 450px; */
+        
+    }
+    
+    .assi-83  > div {
+        width: 100%;
+        
+    }
+
+    .assi-83  > div h3 {
+        color: blue;
+    }
+}
+@media (min-width: 700px) and (max-width:1200px) {
+    .assi-83 {
+        flex-wrap: wrap;
+        /* height: 220px;
+        align-content: space-between; */
+        
+    }
+    
+    .assi-83  > div {
+        width: calc((100% - 30px) / 2 ) ;
+        
+    }
+
+    .assi-83  > div h3 {
+        color: red;
+    }
+}
+
+/* you have two options to give spaces between elements 
+my way : add align-content:space-between; and add height 
+another way : add margin-top and margin-bottom
+ */
+
+ /* you have two options to center text inside elements 
+ my way : display:grid; and place-content:center;
+ another way: add padding-top and padding-bottom to center it verticall and then write text-align:center;  */
+
+
+ /* -------------------------------------------------------- */
+
+
+.assi-84 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "o1 o1" "t2 t3" "f4 f4";
+    gap: 20px;
+    padding: 20px;
+}
+
+.assi-84 > div {
+    background-color: #eee;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.one84 {
+    grid-area: o1;
+}
+.two84 {
+    grid-area: t2;
+}
+.three84 {
+    grid-area: t3;
+}
+.four84 {
+    grid-area: f4;
+}
+
+.assi-84 h3 {
+    color: green;
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .assi-84 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "o1" "t2" "t3" "f4";
+    }
+
+    .assi-84  > div h3 {
+        color: blue;
+    }
+}
+@media (min-width: 700px) and (max-width:1200px) {
+    .assi-84 {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr ;
+        grid-template-areas: "o1 o1 o1" "t2 t3 f4";
+    }
+
+    .assi-84  > div h3 {
+        color: red;
+    }
+}
+
+/* -------------------------------------------------------- */
+
+.center-flex {
+    justify-content: center;
+    align-items: center;
+}
+
+.center-position {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.circle-100 {
+    width:100px; 
+    height: 100px;
+    border-radius: 50% ;
+}
+.circle-200 {
+    width:200px; 
+    height: 200px;
+    border-radius: 50% ;
+}
+
+/* -------------------------------------------------------- */
+
+.arrow {
+    background-color: #eee;
+    padding: 40px;
+    width: 500px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.arrow::before {
+    content: "";
+    position: absolute;
+}
+
+.right::before {
+    right:0;
+    top: 50%;
+    transform: translate(100% , -50%);
+    border-top: 30px solid transparent ;
+    border-right: 30px solid transparent ;
+    border-bottom: 30px solid transparent ;
+    border-left: 30px solid #eee ;
+}
+.left::before {
+    left:0;
+    top: 50%;
+    transform: translate(-100% , -50%);
+    border-top: 30px solid transparent ;
+    border-left: 30px solid transparent ;
+    border-bottom: 30px solid transparent ;
+    border-right: 30px solid #eee ;
+}
+.top::before {
+    left:50%;
+    top: 0;
+    transform: translate(-50% , -100%);
+    border-top: 30px solid transparent ;
+    border-right: 30px solid transparent ;
+    border-left: 30px solid transparent ;
+    border-bottom: 30px solid #eee ;
+}
+.bottom::before {
+    left:50%;
+    bottom: 0;
+    transform: translate(-50% , 100%);
+    border-left: 30px solid transparent ;
+    border-right: 30px solid transparent ;
+    border-bottom: 30px solid transparent ;
+    border-top: 30px solid #eee ;
+}
